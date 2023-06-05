@@ -1,0 +1,10 @@
+.AppLink{
+  font-weight: 500;
+  &:hover{
+    color: var(--accent-color)
+  }
+}
+
+.primary{
+  font-size: 20px;
+}
