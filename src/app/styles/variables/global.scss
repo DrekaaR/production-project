@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-:root{
+:root {
   --font-family-main: Roboto;
 
   --font-size-m: 16px;
@@ -11,8 +11,11 @@
   --font-line-l: 32px;
   --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
 
-  // Sisez
+  // Sises
   --navbar-height: 50px;
   --container-width: 1200px;
-  --container-padding: 15px;
+  --container-padding: 20px;
+  --sidebar-width: 300px;
+  --sidebar-width-collapsed: 80px;
+
 }

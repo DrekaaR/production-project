@@ -1,10 +1,14 @@
 .AppLink{
+  display: inline-flex;
+  align-items: center;
   font-weight: 500;
+  font-size: 16px;
+  transition: color 0.1s ease 0s;
   &:hover{
     color: var(--accent-color)
   }
 }
 
 .primary{
-  font-size: 20px;
+
 }

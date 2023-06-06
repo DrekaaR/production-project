@@ -19,3 +19,12 @@
   padding: 0 var(--container-padding);
   margin: 0 auto;
 }
+
+.content-page{
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.page-wrapper{
+  padding: var(--container-padding);
+}

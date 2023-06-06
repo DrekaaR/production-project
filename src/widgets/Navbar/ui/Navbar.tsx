@@ -1,22 +1,27 @@
-import {useTheme} from "app/providers/ThemeProvider";
-import {classNames} from "shared/lib/classNames/classNames";
-import {AppLink, AppLinkTheme} from "shared/ui/AppLink/AppLink";
-import cls from "./Navbar.module.scss";
+import { useTranslation } from 'react-i18next';
+import { classNames } from 'shared/lib/classNames/classNames';
+import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { LangSwitcher } from 'widgets/LangSwitcher/ui/LangSwitcher';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
+import cls from './Navbar.module.scss';
 
 interface NavbarProps {
     className?: string,
 }
 
-export const Navbar = ({className}: NavbarProps) => {
-    const {toggleTheme} = useTheme();
+export const Navbar = ({ className }: NavbarProps) => {
+    const { t } = useTranslation();
 
     return (
         <div className={classNames(cls.Navbar, {}, [className])}>
-            <div className={classNames(cls.NavbarBody, {}, ['container'])}>
-                <button onClick={toggleTheme}>Change theme</button>
+            <div className={classNames(cls.NavbarBody, {}, [])}>
                 <div className={cls.links}>
-                    <AppLink to="/">Main</AppLink>
-                    <AppLink to="/about">About</AppLink>
+                    <AppLink to="/">{t('Main')}</AppLink>
+                    <AppLink to="/about">{t('About')}</AppLink>
+                </div>
+                <div className={cls.switchers}>
+                    <ThemeSwitcher />
+                    <LangSwitcher />
                 </div>
             </div>
         </div>

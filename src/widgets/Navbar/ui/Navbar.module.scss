@@ -1,17 +1,25 @@
-.Navbar{
-  width: 100%;
-  background-color: var(--second-color);
+.Navbar {
+    width: 100%;
+    background-color: var(--second-color);
+    padding: 0 var(--container-padding);
 }
 
-.NavbarBody{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: var(--navbar-height);
+.NavbarBody {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--navbar-height);
 }
 
-.links{
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
+.links {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    a {
+        height: var(--navbar-height);
+    }
+}
+
+.switchers {
+    display: flex;
 }
