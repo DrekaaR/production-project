@@ -4,27 +4,25 @@
 @import "./themes/normal";
 
 .app {
-  font: var(--font-m);
-
-  background: var(--bg-color);
-  color: var(--text-color);
-
-  min-height: 100vh;
-  transition: background-color, color 0.2s ease 0s;
+    font: var(--font-m);
+    background: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    transition: background-color, color 0.2s ease 0s;
 }
 
-.container{
-  max-width: var(--container-width);
-  width: 100%;
-  padding: 0 var(--container-padding);
-  margin: 0 auto;
+.container {
+    max-width: var(--container-width);
+    width: 100%;
+    padding: 0 var(--container-padding);
+    margin: 0 auto;
 }
 
-.content-page{
-  display: grid;
-  grid-template-columns: auto 1fr;
+.content-page {
+    display: grid;
+    grid-template-columns: auto 1fr;
 }
 
-.page-wrapper{
-  padding: var(--container-padding);
+.page-wrapper {
+    padding: var(--container-padding);
 }
