@@ -3,5 +3,8 @@
   "About": "О нас",
   "Main Page": "Главная страница",
   "About Page": "Страница о нас",
-  "Page not found": "Страница не найдена"
+  "Page not found": "Страница не найдена",
+  "An unexpected error has occurred": "Произошла непредвиденная ошибка",
+  "Reload": "Reload",
+  "Throw error": "Throw error"
 }
