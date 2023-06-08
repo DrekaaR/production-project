@@ -22,11 +22,14 @@
     // import * as React from "react"
     // можно писать
     // import React from "react"
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "include": [
+      "./config/jest/setupTests.ts"
+    ]
   },
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS",
     }
-  }
+  },
 }

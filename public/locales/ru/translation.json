@@ -5,6 +5,7 @@
   "About Page": "Страница о нас",
   "Page not found": "Страница не найдена",
   "An unexpected error has occurred": "Произошла непредвиденная ошибка",
-  "Reload": "Reload",
-  "Throw error": "Throw error"
+  "Reload": "Обновить",
+  "Throw error": "Сделать ошибку",
+  "toggle": "toggle"
 }
