@@ -20,7 +20,7 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
             onClick={toggle}
             className={classNames(cls.LangSwitcher, {}, [className])}
         >
-            {i18n.language}
+            {i18n.language === 'en' ? 'ru' : 'en'}
         </Button>
     );
 };

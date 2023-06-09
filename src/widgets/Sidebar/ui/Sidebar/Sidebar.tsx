@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
+import Icon from 'shared/assets/icons/theme-dark.svg';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -26,6 +27,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
                 onClick={onToggle}
             >
                 {t('toggle')}
+                <Icon />
             </button>
         </div>
     );

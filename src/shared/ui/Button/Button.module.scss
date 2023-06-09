@@ -16,3 +16,19 @@
     border: none;
     outline: none;
 }
+
+.outline {
+    border: 1px solid var(--accent-color);
+    background-color: transparent;
+    color: var(--accent-color);
+    min-height: 40px;
+    padding: 0 20px;
+    transition: background-color 0.2s ease 0s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: #fff;
+            background-color: var(--accent-color);
+        }
+    }
+}
