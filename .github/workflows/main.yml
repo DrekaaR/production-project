@@ -1,10 +1,6 @@
-name: linting, building, testing
+name: linting-building-testing
 run-name: Test project
-on:
-  push:
-    branches: [master]
-  pull_request:
-    branches: [master]
+on: [push]
 jobs:
   pipeline:
     runs-on: ubuntu-latest
