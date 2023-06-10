@@ -9,21 +9,45 @@ jobs:
         node-version: [17.x]
     steps:
       - uses: actions/checkout@v3
+
+      # Step: Setup and configure Node.js
       - name: Starting Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: install modules
+
+      # Step: Install dependencies
+      - name: Install modules
         run: npm install
-      - name: linting typescript
+
+      # Step: TypeScript linting
+      - name: Linting TypeScript
         run: npm run lint:ts
-      - name: linting css
+
+      # Step: CSS linting
+      - name: Linting CSS
         run: npm run lint:scss
-      - name: unit testing
+
+      # Step: Unit testing
+      - name: Unit Testing
         run: npm run test:unit
-      - name: build production project
+
+      # Step: Build production project
+      - name: Build Production Project
         run: npm run build:prod
+
+      # Step: Build Storybook
       - name: build storybook
         run: npm run storybook:build
+
+      # Step: UI screenshot testing
       - name: screenshot testing
         run: npm run test:ui:ci
+
+      # Step: Automatic deployment to hosting platform
+#       - name: Deploy to Hosting Platform
+#         run: |
+          # Add your deployment commands here
+          # For example, if you are using FTP:
+          # npm install -g ftp-deploy
+          # ftp-deploy --user $FTP_USER --password $FTP_PASSWORD --host $FTP_HOST --local-dir ./build --remote-dir /public_html
