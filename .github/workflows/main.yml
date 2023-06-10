@@ -1,20 +1,16 @@
 name: linting, building, testing
-run-name: ${{ github.actor }} is learning GitHub Actions
-
+run-name: Test project
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
-
-
+    branches: [master]
 jobs:
   pipeline:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [17.x]
-
     steps:
       - uses: actions/checkout@v2
       - name: Starting Node.js ${{ matrix.node-version }}
