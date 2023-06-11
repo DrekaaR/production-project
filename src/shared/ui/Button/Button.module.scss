@@ -1,11 +1,28 @@
+$height: 40px;
+$hovered-accent-color: #2792ee;
+
 .Button {
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    padding: 0 20px;
     color: var(--text-color);
     svg {
         font-size: 20px;
+    }
+}
+
+.filled {
+    background-color: var(--accent-color);
+    color: #fff;
+    min-height: $height;
+    transition: background-color 0.2s ease 0s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $hovered-accent-color;
+        }
     }
 }
 
@@ -15,14 +32,19 @@
     background: none;
     border: none;
     outline: none;
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: var(--accent-color);
+        }
+    }
 }
 
 .outline {
     border: 1px solid var(--accent-color);
     background-color: transparent;
     color: var(--accent-color);
-    min-height: 40px;
-    padding: 0 20px;
+    min-height: $height;
     transition: background-color 0.2s ease 0s;
 
     @media (any-hover: hover) {
@@ -30,5 +52,28 @@
             color: #fff;
             background-color: var(--accent-color);
         }
+    }
+}
+
+.square {
+    $size-m: 40px;
+    $size-l: 50px;
+    $size-xl: 60px;
+
+    padding: 0;
+    &.size_m {
+        width: $size-m;
+        height: $size-m;
+        font-size: calc($size-m / 2);
+    }
+    &.size_l {
+        width: $size-l;
+        height: $size-l;
+        font-size: calc($size-l / 2);
+    }
+    &.size_xl {
+        width: $size-xl;
+        height: $size-xl;
+        font-size: calc($size-xl / 2);
     }
 }

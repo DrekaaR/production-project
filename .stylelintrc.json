@@ -4,6 +4,10 @@
     "indentation": [4],
     "selector-class-pattern": null,
     "rule-empty-line-before": null,
-    "no-missing-end-of-source-newline": null
+    "no-missing-end-of-source-newline": null,
+    "no-descending-specificity": null,
+    "alpha-value-notation": null,
+    "color-function-notation": null,
+    "length-zero-no-unit": null
   }
 }
