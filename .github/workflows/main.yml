@@ -1,6 +1,10 @@
 name: linting-building-testing
 run-name: Test project
-on: [push]
+on:
+ push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 jobs:
   pipeline:
     runs-on: ubuntu-latest
@@ -8,50 +12,27 @@ jobs:
       matrix:
         node-version: [17.x]
     steps:
-      - uses: actions/checkout@v3
-
-      # Step: Setup and configure Node.js
+      - uses: actions/checkout@v2
       - name: Starting Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-
-      # Step: Install dependencies
-      - name: Install modules
+      - name: install modules
         run: npm install
-
-      # Step: TypeScript linting
-      - name: Linting TypeScript
-        run: npm run lint:ts
-
-      # Step: CSS linting
-      - name: Linting CSS
-        run: npm run lint:scss
-
-      # Step: Unit testing
-      - name: Unit Testing
-        run: npm run test:unit
-
-      # Step: Build production project
-      - name: Build Production Project
+      - name: build production project
         run: npm run build:prod
-
-      # Step: Build Storybook
+        if: always()
+      - name: linting typescript
+        run: npm run lint:ts
+        if: always()
+      - name: linting css
+        run: npm run lint:scss
+      - name: unit testing
+        if: always()
+        run: npm run test:unit
       - name: build storybook
         run: npm run storybook:build
-
-      # Step: Build Storybook
-      - name: update files from storybook
-        run: loki update --reactUri="file:./storybook-static"
-
-      # Step: UI screenshot testing
+        if: always()
       - name: screenshot testing
         run: npm run test:ui:ci
-
-      # Step: Automatic deployment to hosting platform
-#       - name: Deploy to Hosting Platform
-#         run: |
-          # Add your deployment commands here
-          # For example, if you are using FTP:
-          # npm install -g ftp-deploy
-          # ftp-deploy --user $FTP_USER --password $FTP_PASSWORD --host $FTP_HOST --local-dir ./build --remote-dir /public_html
+        if: always()
