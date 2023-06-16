@@ -27,9 +27,7 @@ body {
 
 body {
     color: var(--text-color);
-    line-height: 1;
-    font-family: var(--font-family-main);
-    font-size: var(--font-m);
+    font: var(--font-m);
     text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

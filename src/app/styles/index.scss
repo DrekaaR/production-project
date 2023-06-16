@@ -4,11 +4,10 @@
 @import "./themes/normal";
 
 .app {
-    font: var(--font-m);
-    background: var(--bg-color);
-    color: var(--text-color);
     min-height: 100vh;
     transition: background-color, color 0.2s ease 0s;
+    background: var(--bg-color);
+    color: var(--text-color);
 }
 
 .container {
