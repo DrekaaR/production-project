@@ -8,6 +8,9 @@
   "Page not found": "Page not found",
   "Reload": "Reload",
   "Throw error": "Throw error",
+  "lorem  lorem lorem": "lorem  lorem lorem",
   "toggle": "toggle",
-  "lorem  lorem lorem": "lorem  lorem lorem"
+  "increment": "increment",
+  "decrement": "decrement",
+  "Counter Value": "Counter Value"
 }

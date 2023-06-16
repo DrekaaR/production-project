@@ -9,5 +9,8 @@
   "Reload": "Reload",
   "Throw error": "Throw error",
   "lorem  lorem lorem": "lorem  lorem lorem",
-  "toggle": "toggle"
+  "toggle": "toggle",
+  "increment": "increment",
+  "decrement": "decrement",
+  "Counter Value": "Counter Value"
 }

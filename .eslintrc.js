@@ -46,6 +46,7 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'no-restricted-globals': 'off',
+        'no-param-reassign': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
             ignoreAttribute: ['data-testid', 'to'],

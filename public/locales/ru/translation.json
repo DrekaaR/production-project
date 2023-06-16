@@ -9,5 +9,8 @@
   "Throw error": "Сделать ошибку",
   "toggle": "toggle",
   "Login": "Login",
-  "lorem  lorem lorem": "lorem  lorem lorem"
+  "lorem  lorem lorem": "lorem  lorem lorem",
+  "increment": "increment",
+  "decrement": "decrement",
+  "Counter Value": "Counter Value"
 }
