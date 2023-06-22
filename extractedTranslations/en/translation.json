@@ -2,15 +2,15 @@
   "About": "About",
   "About Page": "About Page",
   "An unexpected error has occurred": "An unexpected error has occurred",
+  "Counter Value": "Counter Value",
   "Login": "Login",
   "Main": "Main",
   "Main Page": "Main Page",
   "Page not found": "Page not found",
   "Reload": "Reload",
   "Throw error": "Throw error",
-  "lorem  lorem lorem": "lorem  lorem lorem",
-  "toggle": "toggle",
-  "increment": "increment",
   "decrement": "decrement",
-  "Counter Value": "Counter Value"
+  "increment": "increment",
+  "lorem  lorem lorem": "lorem  lorem lorem",
+  "toggle": "toggle"
 }
