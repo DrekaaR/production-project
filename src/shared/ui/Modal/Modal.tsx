@@ -1,13 +1,16 @@
-import React, { ReactNode, useCallback, useEffect } from 'react';
+import React, {
+    ReactNode, useCallback, useEffect, useState,
+} from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Portal } from 'shared/ui/Portal/Portal';
 import cls from './Modal.module.scss';
 
 interface ModalProps {
-    className?: string,
-    children?: ReactNode,
-    isOpen?: boolean,
-    onClose?: () => void
+    className?: string;
+    children?: ReactNode;
+    isOpen?: boolean;
+    onClose?: () => void;
+    lazy?: boolean;
 }
 
 export const Modal = (props: ModalProps) => {
@@ -16,8 +19,17 @@ export const Modal = (props: ModalProps) => {
         children,
         isOpen,
         onClose,
+        lazy,
     } = props;
-    
+
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        if (isOpen) {
+            setIsMounted(true);
+        }
+    }, [isOpen]);
+
     const closeHandler = useCallback(() => {
         if (onClose) {
             onClose();
@@ -47,6 +59,10 @@ export const Modal = (props: ModalProps) => {
     const mods = {
         [cls.opened]: isOpen,
     };
+
+    if (lazy && !isMounted) {
+        return null;
+    }
 
     return (
         <Portal>
