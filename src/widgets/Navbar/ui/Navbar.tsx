@@ -39,10 +39,9 @@ export const Navbar = ({ className }: NavbarProps) => {
                 <Button
                     theme={ButtonTheme.CLEAR}
                     type="button"
-                    onClick={onShowModal}
+                    onClick={authData ? onLogout : onShowModal}
                 >
                     {authData ? t('Logout') : t('Login')}
-
                 </Button>
                 {!authData && (
                     <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />

@@ -1,5 +1,4 @@
 import { Theme, useTheme } from 'app/providers/ThemeProvider';
-import { useTranslation } from 'react-i18next';
 import DarkIcon from 'shared/assets/icons/theme-dark.svg';
 import LightIcon from 'shared/assets/icons/theme-light.svg';
 import { classNames } from 'shared/lib/classNames/classNames';
