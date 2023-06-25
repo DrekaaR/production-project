@@ -1,5 +1,5 @@
 import { Modal } from 'shared/ui/Modal/Modal';
-import { LoginForm } from '../LoginForm/LoginForm';
+import { LoginForm } from '../../ui/LoginForm/LoginForm';
 
 interface LoginModalProps {
     isOpen: boolean;

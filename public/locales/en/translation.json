@@ -13,5 +13,8 @@
   "increment": "increment",
   "decrement": "decrement",
   "Counter Value": "Counter Value",
-  "Password": "Password"
+  "Password": "Password",
+  "Authorization form": "Authorization form",
+  "Logout": "Logout",
+  "Wrong data": "Wrong data"
 }

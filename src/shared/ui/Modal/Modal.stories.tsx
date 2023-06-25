@@ -11,8 +11,8 @@ export default {
 
 const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />;
 
-export const Clear = Template.bind({});
-Clear.args = {
+export const Primary = Template.bind({});
+Primary.args = {
     isOpen: true,
     children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam aut consequatur culpa, debitis eius error ipsa laboriosam mollitia nulla pariatur quae quaerat quo rem sed suscipit temporibus voluptas voluptatum.',
 };
