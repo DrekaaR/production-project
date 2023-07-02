@@ -47,6 +47,7 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'no-restricted-globals': 'off',
         'no-param-reassign': 'off',
+        'lines-between-class-members': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
             ignoreAttribute: ['data-testid', 'to'],

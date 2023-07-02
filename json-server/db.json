@@ -1,41 +1,41 @@
 {
   "posts": [
     {
-      "id": 1,
+      "id": "1",
       "title": "json-server",
       "author": "typicode"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Introduction to JSON",
       "author": "JohnDoe"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Working with REST APIs",
       "author": "JaneSmith"
     }
   ],
   "comments": [
     {
-      "id": 1,
+      "id": "1",
       "body": "some comment",
       "postId": 1
     },
     {
-      "id": 2,
+      "id": "2",
       "body": "Great article!",
       "postId": 2
     },
     {
-      "id": 3,
+      "id": "3",
       "body": "I disagree with the author's viewpoint.",
       "postId": 3
     }
   ],
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "username": "admin",
       "password": "123"
     }
