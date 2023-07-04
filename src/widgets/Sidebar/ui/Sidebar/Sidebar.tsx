@@ -1,21 +1,28 @@
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { memo, useMemo, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
+import { SidebarItemsList } from '../../model/items';
+import { SidebarItem } from '../../ui/SidebarItem/SidebarItem';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
     className?: string,
 }
 
-export const Sidebar = ({ className }: SidebarProps) => {
+export const Sidebar = memo(({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState<boolean>(false);
-    const { t } = useTranslation();
 
     const onToggle = () => {
         setCollapsed((prev) => !prev);
     };
+
+    const itemsLimit = useMemo(() => SidebarItemsList.map((item) => (
+        <SidebarItem
+            key={item.path}
+            collapsed={collapsed}
+            item={item}
+        />
+    )), [collapsed]);
 
     return (
         <div
@@ -23,16 +30,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
             className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
         >
             <ul className={cls.items}>
-                <li>
-                    <AppLink to="/">
-                        {t('Main')}
-                    </AppLink>
-                </li>
-                <li>
-                    <AppLink to="/about">
-                        {t('About')}
-                    </AppLink>
-                </li>
+                {itemsLimit}
             </ul>
             <Button
                 data-testid="sidebar-toggle"
@@ -47,4 +45,4 @@ export const Sidebar = ({ className }: SidebarProps) => {
             </Button>
         </div>
     );
-};
+});

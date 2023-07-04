@@ -41,9 +41,13 @@
     }
   ],
   "profile": {
-    "name": "typicode",
-    "email": "typicode@example.com",
-    "age": 30,
-    "location": "New York"
+    "first": "Aleksandr",
+    "lastname": "Troshin",
+    "age": 26,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Moscow",
+    "username": "admin",
+    "avatar": "https://lh3.googleusercontent.com/pw/AJFCJaVq21Sz_dXOO0pFDJWuetby3Qj9dHEmfgmgar5TazzjZEFDtfSbz_Jp9_pbkOFX3pozR1ozfZzjX6AY-0XnA-gi-esdDTyz-ZK8D9I4rzRNUrRo5c---nyWwXUmWVdUHJEm9oNJbHaHUGUFb2UUgA0aTrDW8kLuR2haB1bvwvIIBDaKU3N7Gj7KZr_rggAWxFU5oAApQtAMdy5XMzDGpjG2ttD64mgV4WZp07wv5roMmF5b5jaHr5LOCa56HoDTg3JVzHiqWKdyJXMBpcOhP6nuHXP32W3waOqvK4kMQBPmndOgiK3Ph08_tVZhLaJ_j5R8RMN_2GqClMk4I4Y26zlQrSXQi5wI4kz6_cYZaw7VmQMbldsR4ovfj8Dei_B5-8dNkLhVx0dzHQ0FXJoGXClEKU-ghZoBtd6mpPSZe1tJYRw85D4rIa5pgOHt5Ilx5TUSFhYgUA6XDKd_M4PNMAw6_7_syQqY1TKqyMz0naBnkMKOiPhFvkB1plrbWv0obhiLgYTSrpYQllhekhWIBUbC9SE9C294QIKV351qTGKpdJeHktjo01sj3igDQGhI9zC9ExWaSs4m_2J3ymt5qOOmgGCNujGGTjRffs2SPuZjeaKNX2V0snSTDVVdloo6_Tm-sjjMQOf8GRZZvoCXvl_4R8fCMlkSTMwPSihPzJcPEOPIRPcvucaIKLmmodEHwfYkfAIZnyxZykHbB8rrsZj4q8rOPUPRxee8o748Yfjohk2EhcCqK3cEIiDL1QMAcv6s9Q_aiXquGqDIh3qxSA1jyPkWIwkPZcyMWS5WlCrPGgGxy18O2C4HFBcjJqeZ1W6EIuxbL7wVAhUntYFu1uuJn88Ft-4YmYv2ZLnR8ONIEcUuq7yczDESiFsO1xfNMX2wLzI84jYmLU6ECRjLxCk=w1272-h1279-s-no?authuser=0"
   }
 }

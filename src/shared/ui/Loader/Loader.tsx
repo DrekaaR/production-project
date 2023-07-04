@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import './Loader.scss';
 
@@ -6,7 +7,7 @@ interface LoaderProps {
     small?: boolean
 }
 
-export const Loader = ({ className, small }: LoaderProps) => {
+export const Loader = memo(({ className, small }: LoaderProps) => {
     if (small) {
         return (
             <div
@@ -24,4 +25,4 @@ export const Loader = ({ className, small }: LoaderProps) => {
             </div>
         </div>
     );
-};
+});

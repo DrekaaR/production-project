@@ -1,4 +1,8 @@
 module.exports = {
+    globals: {
+        __IS_DEV__: true,
+        __API__: true,
+    },
     env: {
         browser: true,
         es2021: true,
@@ -56,9 +60,6 @@ module.exports = {
             ignoreComments: true,
             code: 120,
         }],
-    },
-    globals: {
-        __IS_DEV__: true,
     },
     overrides: [{
         files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
