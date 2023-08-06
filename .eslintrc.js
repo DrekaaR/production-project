@@ -38,7 +38,7 @@ module.exports = {
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
         // Semantic end
-        'no-unused-vars': 'warn',
+        'no-unused-vars': 'off',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
         'react/jsx-props-no-spreading': 'warn',
@@ -51,6 +51,7 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'no-restricted-globals': 'off',
         'no-param-reassign': 'off',
+        'no-undef': 'off',
         'lines-between-class-members': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,

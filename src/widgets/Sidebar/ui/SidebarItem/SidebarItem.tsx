@@ -8,15 +8,17 @@ interface SidebarItemProps {
 }
 
 export const SidebarItem = ({ item, collapsed }: SidebarItemProps) => (
-    <li>
-        <AppLink
-            to={item.path}
-            className={cls.item}
-        >
-            <item.Icon className={cls.icon} />
-            <span className={cls.link}>
-                {item.text}
-            </span>
-        </AppLink>
-    </li>
+    item ? (
+        <li>
+            <AppLink
+                to={item.path}
+                className={cls.item}
+            >
+                <item.Icon className={cls.icon} />
+                <span className={cls.link}>
+                    {item.text}
+                </span>
+            </AppLink>
+        </li>
+    ) : null
 );

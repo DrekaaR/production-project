@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, memo, ReactNode } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { Loader } from 'shared/ui/Loader/Loader';
 import cls from './Button.module.scss';
 
@@ -28,14 +28,14 @@ export const Button = memo((props: ButtonProps) => {
     const {
         className,
         children,
-        theme,
+        theme = ButtonTheme.FILLED,
         square,
-        size,
+        size = ButtonSize.M,
         isLoading,
         ...otherProps
     } = props;
 
-    const mods = {
+    const mods: Mods = {
         [cls.square]: square,
         [cls.loading]: isLoading,
     };

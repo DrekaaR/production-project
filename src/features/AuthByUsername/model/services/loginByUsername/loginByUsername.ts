@@ -13,7 +13,11 @@ enum LoginErrors {
     SERVER_ERROR = ''
 }
 
-export const loginByUsername = createAsyncThunk<User, loginByUsernameProps, ThunkConfig<string>>(
+export const loginByUsername = createAsyncThunk<
+    User,
+    loginByUsernameProps, 
+    ThunkConfig<string>
+>(
     'login/loginByUsername',
     async (authData, thunkAPI) => {
         const { dispatch, extra, rejectWithValue } = thunkAPI;
@@ -30,7 +34,7 @@ export const loginByUsername = createAsyncThunk<User, loginByUsernameProps, Thun
 
             return response.data;
         } catch (e) {
-            return rejectWithValue(e.message);
+            return rejectWithValue('error');
         }
     },
 );

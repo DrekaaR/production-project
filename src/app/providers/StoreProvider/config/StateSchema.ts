@@ -1,5 +1,5 @@
 import {
-    AnyAction, CombinedState, Reducer, ReducersMapObject, 
+    AnyAction, CombinedState, Dispatch, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { ToolkitStore } from '@reduxjs/toolkit/dist/configureStore';
 import { To } from '@remix-run/router';
@@ -31,11 +31,11 @@ export interface ReduxStoreWithManager extends ToolkitStore<StateSchema>{
 }
 
 export interface ThunkExtraArg {
-    api: AxiosInstance,
-    navigate: (to: To, options?: NavigateOptions) => void,
+    api: AxiosInstance;
+    navigate?: (to: To, options?: NavigateOptions) => void;
 }
 
 export interface ThunkConfig<T> {
-    rejectValue: T,
-    extra: ThunkExtraArg
+    rejectValue: T;
+    extra: ThunkExtraArg;
 }
