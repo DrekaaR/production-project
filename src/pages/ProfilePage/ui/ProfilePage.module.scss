@@ -1,0 +1,7 @@
+.ProfilePage {
+    border: 1px solid var(--second-color);
+
+    &.editing {
+        border-color: var(--accent-color);
+    }
+}

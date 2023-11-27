@@ -1,5 +1,4 @@
 $height: 45px;
-$hovered-accent-color: #2792ee;
 
 .Button {
     display: flex;
@@ -8,6 +7,7 @@ $hovered-accent-color: #2792ee;
     cursor: pointer;
     padding: 0 20px;
     color: var(--text-color);
+
     svg {
         font-size: 20px;
     }
@@ -26,7 +26,20 @@ $hovered-accent-color: #2792ee;
 
     @media (any-hover: hover) {
         &:hover {
-            background-color: $hovered-accent-color;
+            background-color: var(--hovered-accent-color);
+        }
+    }
+}
+
+.filled-red {
+    background-color: var(--red);
+    color: #fff;
+    min-height: $height;
+    transition: background-color 0.2s ease 0s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: var(--red-dark);
         }
     }
 }
@@ -45,19 +58,47 @@ $hovered-accent-color: #2792ee;
     }
 }
 
+%outline-hover {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.05);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s ease 0s;
+        transition-property: opacity, visibility;
+    }
+
+    @media (any-hover: hover) {
+        &:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
 .outline {
     border: 1px solid var(--accent-color);
     background-color: transparent;
     color: var(--accent-color);
     min-height: $height;
-    transition: background-color 0.2s ease 0s;
 
-    @media (any-hover: hover) {
-        &:hover {
-            color: #fff;
-            background-color: var(--accent-color);
-        }
-    }
+    @extend %outline-hover;
+}
+
+.outline-red {
+    border: 1px solid var(--red);
+    background-color: transparent;
+    color: var(--red);
+    min-height: $height;
+
+    @extend %outline-hover;
 }
 
 .square {
@@ -66,16 +107,19 @@ $hovered-accent-color: #2792ee;
     $size-xl: 60px;
 
     padding: 0;
+
     &.size_m {
         width: $size-m;
         height: $size-m;
         font-size: calc($size-m / 2);
     }
+
     &.size_l {
         width: $size-l;
         height: $size-l;
         font-size: calc($size-l / 2);
     }
+
     &.size_xl {
         width: $size-xl;
         height: $size-xl;

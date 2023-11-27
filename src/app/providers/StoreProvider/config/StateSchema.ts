@@ -1,5 +1,5 @@
 import {
-    AnyAction, CombinedState, Dispatch, Reducer, ReducersMapObject,
+    AnyAction, CombinedState, Reducer, ReducersMapObject, 
 } from '@reduxjs/toolkit';
 import { ToolkitStore } from '@reduxjs/toolkit/dist/configureStore';
 import { To } from '@remix-run/router';
@@ -38,4 +38,5 @@ export interface ThunkExtraArg {
 export interface ThunkConfig<T> {
     rejectValue: T;
     extra: ThunkExtraArg;
+    state: StateSchema;
 }

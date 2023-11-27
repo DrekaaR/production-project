@@ -1,4 +1,17 @@
 {
+  "Age": "Age",
+  "Avatar": "Avatar",
+  "Avatar link": "Avatar link",
+  "Cancel": "Cancel",
+  "City": "City",
+  "Country": "",
+  "Currency": "Currency",
   "Edit": "",
-  "Profile": ""
+  "Last name": "Last name",
+  "Name": "Name",
+  "Profile": "",
+  "Profile card error occurs while loading": "Profile card error occurs while loading",
+  "Save": "Save",
+  "Something went wrong": "Something went wrong",
+  "Username": "Username"
 }

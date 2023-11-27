@@ -1,8 +1,32 @@
+.SidebarItem {
+    &:not(:last-child) {
+        border-bottom: 1px solid var(--border-color);
+    }
+}
+
+.icon {
+    flex: 0 0 16px;
+}
+
 .item {
     width: 100%;
-    a {
-        padding: 12px 0;
-        font-size: 20px;
-        display: flex;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    height: 45px;
+    padding: 0 15px;
+
+    span {
+        transition: all 0.2s ease 0s;
     }
+}
+
+.title {
+    display: inline-block;
+    margin-top: 1.5px;
+    white-space: nowrap;
+}
+
+.collapsed span {
+    display: none;
 }

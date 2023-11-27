@@ -3,7 +3,6 @@
     width: var(--sidebar-width);
     background-color: var(--second-color);
     position: relative;
-    padding: var(--container-padding);
     transition: width 0.2s ease 0s;
     &.collapsed {
         width: var(--sidebar-width-collapsed);

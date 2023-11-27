@@ -1,3 +1,6 @@
+import { getUserAuthData } from 'entities/User';
+import { useSelector } from 'react-redux';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { SidebarItemType } from '../../model/items';
 import cls from './SidebarItem.module.scss';
@@ -7,18 +10,32 @@ interface SidebarItemProps {
     collapsed: boolean;
 }
 
-export const SidebarItem = ({ item, collapsed }: SidebarItemProps) => (
-    item ? (
-        <li>
+export const SidebarItem = ({ item, collapsed }: SidebarItemProps) => {
+    const isAuth = useSelector(getUserAuthData);
+
+    if (item?.authOnly && !isAuth) {
+        return null;
+    }
+
+    if (!item) {
+        return null;
+    }
+
+    const mods: Mods = {
+        [cls.collapsed]: collapsed,
+    };
+
+    return (
+        <li className={classNames(cls.SidebarItem, mods)}>
             <AppLink
                 to={item.path}
                 className={cls.item}
             >
                 <item.Icon className={cls.icon} />
-                <span className={cls.link}>
+                <span className={cls.title}>
                     {item.text}
                 </span>
             </AppLink>
         </li>
-    ) : null
-);
+    );
+};

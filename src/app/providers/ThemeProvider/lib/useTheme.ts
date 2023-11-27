@@ -3,7 +3,7 @@ import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from './ThemeContext';
 
 interface UseThemeResult {
     toggleTheme: () => void,
-    theme: Theme
+    theme: Theme | undefined
 }
 
 export function useTheme(): UseThemeResult {
@@ -15,5 +15,5 @@ export function useTheme(): UseThemeResult {
         localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
     };
 
-    return { theme: Theme.DARK, toggleTheme };
+    return { theme, toggleTheme };
 }

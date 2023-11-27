@@ -1,0 +1,22 @@
+.Select {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.selectItem {
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    color: var(--text-color);
+    padding: 5px 10px 5px 5px;
+    font-size: 14px;
+    border: 1px solid var(--second-color);
+    border-radius: 0;
+
+    option {
+        display: block;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+}
