@@ -38,13 +38,14 @@ export const Input = memo((props: InputProps) => {
     }, [autoFocus]);
 
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const newValue = e.target.value;
+
         if (type === 'digital') {
-            const numberRegex = /^[0-9]+$/;
-            if (numberRegex.test(e.target.value)) {
-                onChange?.(e.target.value);
+            if (!isNaN(Number(newValue)) || newValue === '') {
+                onChange?.(newValue);
             }
         } else {
-            onChange?.(e.target.value);
+            onChange?.(newValue);
         }
     };
 

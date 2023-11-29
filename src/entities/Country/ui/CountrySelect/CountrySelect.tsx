@@ -1,5 +1,4 @@
 import { memo, useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Select } from 'shared/ui/Select/Select';
 import { Country } from '../../model/types/country';
@@ -24,9 +23,9 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
         className, value, onChange, readonly,
     } = props;
 
-    const onChangeHandler = useCallback(() => {
-        onChange?.(value as Country);
-    }, [onChange, value]);
+    const onChangeHandler = useCallback((selectedValue: string) => {
+        onChange?.(selectedValue as Country);
+    }, [onChange]);
 
     return (
         <Select

@@ -1,5 +1,4 @@
 import { memo, useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Select } from 'shared/ui/Select/Select';
 import { Currency } from '../../model/types/currency';
@@ -22,9 +21,9 @@ export const CurrencySelect = memo((props: CurrencySelectProps) => {
         className, value, onChange, readonly,
     } = props;
 
-    const onChangeHandler = useCallback(() => {
-        onChange?.(value as Currency);
-    }, [onChange, value]);
+    const onChangeHandler = useCallback((selectedValue: string) => {
+        onChange?.(selectedValue as Currency);
+    }, [onChange]);
 
     return (
         <Select

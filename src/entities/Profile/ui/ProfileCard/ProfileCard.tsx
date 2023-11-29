@@ -2,19 +2,19 @@ import { CountrySelect } from 'entities/Country';
 import { Country } from 'entities/Country/model/types/country';
 import { CurrencySelect } from 'entities/Currency';
 import { Currency } from 'entities/Currency/model/types/currency';
-import { Profile } from 'entities/Profile';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Input } from 'shared/ui/Input/Input';
 import { Loader } from 'shared/ui/Loader/Loader';
 import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
+import { Profile } from '../../model/types/profile';
 import cls from './ProfileCard.module.scss';
 
 interface ProfileCardProps {
     className?: string;
     data?: Profile;
-    isLoading: boolean;
+    isLoading: boolean | undefined;
     error: string;
     readonly?: boolean;
     onChangeFirstname?: (value?: string) => void;
@@ -69,7 +69,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
     return (
         <div className={classNames(cls.ProfileCard, {}, [className])}>
             <div className={cls.data}>
-                {data?.avatar && <Avatar className={cls.avatar} src={data?.avatar} />}
+                <Avatar className={cls.avatar} src={data?.avatar} />
                 <div className={cls.form}>
                     <div className={cls.formItem}>
                         <div className={cls.formLabel}>{t('Name')}</div>
