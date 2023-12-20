@@ -1,0 +1,24 @@
+.ArticleDetails {
+    min-height: 100%;
+}
+
+.avatar {
+    margin-left: auto;
+    margin-right: auto;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.title {
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.skeleton {
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}

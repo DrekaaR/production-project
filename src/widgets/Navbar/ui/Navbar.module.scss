@@ -1,7 +1,6 @@
 .Navbar {
     width: 100%;
     background-color: var(--second-color);
-    padding: 0 var(--container-padding);
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -24,4 +23,10 @@
 
 .switchers {
     display: flex;
+}
+
+.loginButton {
+    height: 100%;
+    padding: 0 20px;
+    border-right: 1px solid var(--border-color);
 }

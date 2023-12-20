@@ -5,14 +5,13 @@
 @import "./themes/green";
 
 .app {
-    min-height: 100vh;
-    transition: background-color, color 0.2s ease 0s;
     background: var(--bg-color);
     color: var(--text-color);
+    height: calc(100vh - 50px);
+    overflow: clip;
 }
 
 .container {
-    max-width: var(--container-width);
     width: 100%;
     padding: 0 var(--container-padding);
     margin: 0 auto;
@@ -25,4 +24,7 @@
 
 .page-wrapper {
     padding: var(--container-padding);
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100vh - var(--navbar-height));
 }

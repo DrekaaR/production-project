@@ -1,7 +1,7 @@
 .LangSwitcher {
     display: flex;
     align-items: center;
-    width: calc(var(--navbar-height) / 1.2);
     height: var(--navbar-height);
     text-transform: uppercase;
+    padding: 0 15px;
 }

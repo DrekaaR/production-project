@@ -1,11 +1,10 @@
 .SidebarItem {
-    &:not(:last-child) {
-        border-bottom: 1px solid var(--border-color);
-    }
+    border-bottom: 1px solid var(--border-color);
 }
 
 .icon {
     flex: 0 0 16px;
+    margin-top: -2px;
 }
 
 .item {
@@ -15,10 +14,6 @@
     column-gap: 8px;
     height: 45px;
     padding: 0 15px;
-
-    span {
-        transition: all 0.2s ease 0s;
-    }
 }
 
 .title {

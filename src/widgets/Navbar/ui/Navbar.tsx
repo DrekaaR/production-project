@@ -18,6 +18,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     const [isAuthModal, setIsAuthModal] = useState(false);
     const authData = useSelector(getUserAuthData);
     const dispatch = useDispatch();
+
     const onCloseModal = useCallback(() => {
         setIsAuthModal(false);
     }, []);
@@ -37,6 +38,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         >
             <div className={classNames(cls.NavbarBody, {}, [])}>
                 <Button
+                    className={cls.loginButton}
                     theme={ButtonTheme.CLEAR}
                     type="button"
                     onClick={authData ? onLogout : onShowModal}
