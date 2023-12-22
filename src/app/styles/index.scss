@@ -7,8 +7,7 @@
 .app {
     background: var(--bg-color);
     color: var(--text-color);
-    height: calc(100vh - 50px);
-    overflow: clip;
+    height: calc(100vh - var(--navbar-height-fixed));
 }
 
 .container {
@@ -26,5 +25,5 @@
     padding: var(--container-padding);
     overflow-y: auto;
     overflow-x: hidden;
-    height: calc(100vh - var(--navbar-height));
+    height: calc(100vh - var(--navbar-height-fixed));
 }

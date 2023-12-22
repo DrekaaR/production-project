@@ -1,2 +1,15 @@
 .ArticleImageBlockComponent {
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+
+.image img {
+    max-width: 100%;
+}
+
+.title {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
 }

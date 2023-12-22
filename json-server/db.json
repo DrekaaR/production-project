@@ -93,7 +93,7 @@
         {
           "id": "3",
           "type": "CODE",
-          "code": "console.log('ВАШ ТЕКСТ');"
+          "code": "console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ')console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ');"
         },
         {
           "id": "4",

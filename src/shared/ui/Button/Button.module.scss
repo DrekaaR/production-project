@@ -107,6 +107,10 @@ $height: 45px;
 
     padding: 0;
 
+    svg {
+        font-size: 15px;
+    }
+
     &.size_m {
         width: $size-m;
         height: $size-m;

@@ -2,9 +2,18 @@
     min-height: 100%;
 }
 
-.avatar {
-    margin-left: auto;
-    margin-right: auto;
+.mainImage {
+    position: relative;
+    height: 400px;
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
 
     &:not(:last-child) {
         margin-bottom: 20px;
@@ -19,6 +28,27 @@
 
 .skeleton {
     &:not(:last-child) {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+.articleInfo {
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.infoItem {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    svg {
+        margin-top: -2px;
+        font-size: 18px;
     }
 }

@@ -8,6 +8,7 @@
     "no-descending-specificity": null,
     "alpha-value-notation": null,
     "color-function-notation": null,
-    "length-zero-no-unit": null
+    "length-zero-no-unit": null,
+    "block-no-empty": null
   }
 }
