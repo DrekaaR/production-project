@@ -6,6 +6,11 @@
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 30px;
+
+    @media (max-width: 767.98px) {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
 }
 
 .form {
