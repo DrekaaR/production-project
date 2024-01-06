@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Article } from 'entities/Article';
-import { ArticleBlockType, ArticleType } from 'entities/Article/modal/types/article';
+import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
 import ArticleDetailsPage from './ArticleDetailsPage';
 
 export default {
@@ -15,8 +15,7 @@ const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => <ArticleDe
 
 const article:Article = {
     id: '1',
-    title: 'JS news',
-    subtitle: 'Whats new in js while 2022',
+    title: 'JavaScript для начинающих. Урок 1',
     img: 'https://bairesdev.mo.cloudinary.net/blog/2023/08/What-Is-JavaScript-Used-For.jpg',
     views: 1022,
     createdAt: '27.09.2023',
@@ -25,27 +24,27 @@ const article:Article = {
         {
             id: '1',
             type: ArticleBlockType.TEXT,
+            title: 'Вступление',
             paragraphs: [
-                'JavaScript is a programming language!',
-                'According to some studies, by the way, it is the most popular. And certainly one of the easiest to get into IT.',
-                'In general, web development is, in my opinion, a very welcoming place for beginners and offers a multitude of opportunities. So rejoice, dear young developers from around the world who are reading this article right now.',
-                'In many ways, the language is popular due to the development of the web. After all, it monopolized the browser and is, with rare exceptions, the only language capable of creating animations and validating forms, implementing almost any complex logic on the client side (in the browser).',
-                "The modern web is not just simple websites and online stores from the 2000s, but mostly complex and interesting web applications. In addition to client-side logic, JavaScript is also popular on the server. And its popularity there is growing year by year. Furthermore, JavaScript allows you to write mobile applications and even ventures a bit into desktop applications.\nIn short, it's one language with many possibilities.",
+                'JavaScript - язык программирования!',
+                'По некоторым исследованиям, кстати, самый популярный. И уж точно один из самых простых для входа в IT.',
+                'В целом, веб-разработка - то место, на мой взгляд, которое весьма лояльно относится к новичкам и дает большое количество возможностей. Так что возрадуйтесь, дорогие молодые разработчики со всего мира, кто сейчас читает эту статью.',
+                'Во многом, язык популярен благодаря развитию веба. Ведь он монополизировал браузер и является, за редкими исключениями, единственным языком способным делать анимации и формочки валидировать делать почти сколь угодно сложную логику на клиенте (в браузере)',
+                'Современный веб - это не лэндосики и интернет магазины из 2000-х, а, по большей части, достаточно сложные и интересные веб приложения. Помимо клиентской логики JS также популярен на сервере. И там его популярность растет год от года. Еще JS позволяет писать мобильные приложения и даже немного на десктоп замахивается.\nВ общем, язык один, а возможностей много.',
             ],
         },
         {
             id: '2',
             type: ArticleBlockType.TEXT,
-            title: "Let's go (Hello world)\n",
+            title: 'Погнали (Hello world)',
             paragraphs: [
-                "In the world of IT, it's widely accepted to begin learning anything with a \"hello world\" application. It's a pretty good practice. The most challenging part of learning something new is to start, and starting with something super simple is not that difficult.",
-                "I've prepared a mini-project for you in CodeSandbox. That's where we'll be working:",
+                'Принято в мире IT начинать изучение чего либо с "hello world" приложения.\nЭто довольно таки хорошая практика. Самое сложное, в изучении чего либо - начать, а начинать с чего то супер простого - не так сложно.',
             ],
         },
         {
             id: '3',
             type: ArticleBlockType.CODE,
-            code: "console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ')console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ');",
+            code: "console.log('ВАШ ТЕКСТ')",
         },
         {
             id: '4',
@@ -63,7 +62,6 @@ const article:Article = {
             id: '6',
             type: ArticleBlockType.IMAGE,
             src: 'https://habrastorage.org/getpro/habr/upload_files/1bf/1f6/3e6/1bf1f63e680625c26877bb2d20f9f651.png',
-            title: 'Example 1',
         },
         {
             id: '7',

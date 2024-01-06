@@ -1,0 +1,15 @@
+.CommentCard {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+}
+
+.header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 50px 1fr;
+    column-gap: 10px;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}

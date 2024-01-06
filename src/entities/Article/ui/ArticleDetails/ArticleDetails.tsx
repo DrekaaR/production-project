@@ -15,10 +15,10 @@ import {
     getArticleDetailsData,
     getArticleDetailsError,
     getArticleDetailsIsLoading,
-} from '../../modal/selectors/articleDetails';
-import { fetchArticleById } from '../../modal/services/fetchArticleById/fetchArticleById';
-import { articleDetailsReducer } from '../../modal/slice/articleDetailsSlice';
-import { ArticleBlock, ArticleBlockType } from '../../modal/types/article';
+} from 'entities/Article/model/selectors/articleDetails';
+import { fetchArticleById } from 'entities/Article/model/services/fetchArticleById/fetchArticleById';
+import { articleDetailsReducer } from 'entities/Article/model/slice/articleDetailsSlice';
+import { ArticleBlock, ArticleBlockType } from 'entities/Article/model/types/article';
 import cls from './ArticleDetails.module.scss';
 
 interface ArticleDetailsProps {

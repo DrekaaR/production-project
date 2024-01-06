@@ -8,9 +8,10 @@
 }
 
 .content {
-    overflow-x: auto;
+    overflow: auto;
     padding-bottom: 5px;
     display: block;
+    width: 100%;
 }
 
 .copyButton {

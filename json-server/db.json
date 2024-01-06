@@ -19,21 +19,15 @@
   "comments": [
     {
       "id": "1",
-      "text": "some comment",
+      "text": "I disagree with the author's viewpoint.",
       "articleId": "1",
-      "postId": 1
+      "userId": 1
     },
     {
       "id": "2",
       "text": "Great article!",
-       "articleId": "2",
-      "postId": 2
-    },
-    {
-      "id": "3",
-      "text": "I disagree with the author's viewpoint.",
-       "articleId": "3",
-      "postId": 3
+      "articleId": "1",
+      "userId": 2
     }
   ],
   "users": [
@@ -41,13 +35,15 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "admin"
+      "role": "admin",
+      "avatar": "https://s0.rbk.ru/v6_top_pics/media/img/6/67/756484737186676.jpg"
     },
     {
       "id": "2",
-      "username": "user",
-      "password": "123",
-      "role": "user"
+      "username": "KittyCat",
+      "password": "1234",
+      "role": "user",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/RedCat_8727.jpg/1200px-RedCat_8727.jpg"
     }
   ],
   "profile": {
@@ -63,8 +59,7 @@
   "articles": [
     {
       "id": "1",
-      "title": "JS news",
-      "subtitle": "Whats new in js while 2022",
+      "title": "JavaScript для начинающих. Урок 1",
       "img": "https://bairesdev.mo.cloudinary.net/blog/2023/08/What-Is-JavaScript-Used-For.jpg",
       "views": 1022,
       "createdAt": "27.09.2023",
@@ -73,27 +68,27 @@
         {
           "id": "1",
           "type": "TEXT",
+          "title": "Вступление",
           "paragraphs": [
-            "JavaScript is a programming language!",
-            "According to some studies, by the way, it is the most popular. And certainly one of the easiest to get into IT.",
-            "In general, web development is, in my opinion, a very welcoming place for beginners and offers a multitude of opportunities. So rejoice, dear young developers from around the world who are reading this article right now.",
-            "In many ways, the language is popular due to the development of the web. After all, it monopolized the browser and is, with rare exceptions, the only language capable of creating animations and validating forms, implementing almost any complex logic on the client side (in the browser).",
-            "The modern web is not just simple websites and online stores from the 2000s, but mostly complex and interesting web applications. In addition to client-side logic, JavaScript is also popular on the server. And its popularity there is growing year by year. Furthermore, JavaScript allows you to write mobile applications and even ventures a bit into desktop applications.\nIn short, it's one language with many possibilities."
+            "JavaScript - язык программирования!",
+            "По некоторым исследованиям, кстати, самый популярный. И уж точно один из самых простых для входа в IT.",
+            "В целом, веб-разработка - то место, на мой взгляд, которое весьма лояльно относится к новичкам и дает большое количество возможностей. Так что возрадуйтесь, дорогие молодые разработчики со всего мира, кто сейчас читает эту статью.",
+            "Во многом, язык популярен благодаря развитию веба. Ведь он монополизировал браузер и является, за редкими исключениями, единственным языком способным делать анимации и формочки валидировать делать почти сколь угодно сложную логику на клиенте (в браузере)",
+            "Современный веб - это не лэндосики и интернет магазины из 2000-х, а, по большей части, достаточно сложные и интересные веб приложения. Помимо клиентской логики JS также популярен на сервере. И там его популярность растет год от года. Еще JS позволяет писать мобильные приложения и даже немного на десктоп замахивается.\nВ общем, язык один, а возможностей много."
           ]
         },
         {
           "id": "2",
           "type": "TEXT",
-          "title": "Let's go (Hello world)\n",
+          "title": "Погнали (Hello world)",
           "paragraphs": [
-            "In the world of IT, it's widely accepted to begin learning anything with a \"hello world\" application. It's a pretty good practice. The most challenging part of learning something new is to start, and starting with something super simple is not that difficult.",
-            "I've prepared a mini-project for you in CodeSandbox. That's where we'll be working:"
+            "Принято в мире IT начинать изучение чего либо с \"hello world\" приложения.\nЭто довольно таки хорошая практика. Самое сложное, в изучении чего либо - начать, а начинать с чего то супер простого - не так сложно."
           ]
         },
         {
           "id": "3",
           "type": "CODE",
-          "code": "console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ')console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ');"
+          "code": "console.log('ВАШ ТЕКСТ')"
         },
         {
           "id": "4",
@@ -110,8 +105,7 @@
         {
           "id": "6",
           "type": "IMAGE",
-          "src": "https://habrastorage.org/getpro/habr/upload_files/1bf/1f6/3e6/1bf1f63e680625c26877bb2d20f9f651.png",
-          "title": "Example 1"
+          "src": "https://habrastorage.org/getpro/habr/upload_files/1bf/1f6/3e6/1bf1f63e680625c26877bb2d20f9f651.png"
         },
         {
           "id": "7",
