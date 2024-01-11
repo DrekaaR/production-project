@@ -4,8 +4,10 @@
     row-gap: 30px;
 }
 
-.title {
-    &:not(:last-child) {
-        margin-bottom: 15px;
-    }
+.title:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.form:not(:last-child) {
+    margin-bottom: 30px;
 }

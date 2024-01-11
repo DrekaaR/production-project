@@ -14,6 +14,7 @@
   "Country": "Country",
   "Currency": "Currency",
   "Edit": "Edit",
+  "Enter": "Enter",
   "Error ocurs while article was loading": "Error ocurs while article was loading",
   "Error uploading comments": "Error uploading comments",
   "Incorrect age": "Incorrect age",
@@ -37,5 +38,6 @@
   "There was an error loading comments": "There was an error loading comments",
   "Throw error": "Throw error",
   "Username": "Username",
+  "Write your comment": "Write your comment",
   "user avatar": "user avatar"
 }

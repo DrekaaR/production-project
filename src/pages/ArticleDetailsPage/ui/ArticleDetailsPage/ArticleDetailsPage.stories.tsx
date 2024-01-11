@@ -1,6 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Article } from 'entities/Article';
 import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
+import { StoreDecorator } from 'shared/config/storybook/Decorators/StoreDecorator';
 import ArticleDetailsPage from './ArticleDetailsPage';
 
 export default {
@@ -13,7 +14,7 @@ export default {
 
 const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => <ArticleDetailsPage {...args} />;
 
-const article:Article = {
+const data: Article = {
     id: '1',
     title: 'JavaScript для начинающих. Урок 1',
     img: 'https://bairesdev.mo.cloudinary.net/blog/2023/08/What-Is-JavaScript-Used-For.jpg',
@@ -44,7 +45,7 @@ const article:Article = {
         {
             id: '3',
             type: ArticleBlockType.CODE,
-            code: "console.log('ВАШ ТЕКСТ')",
+            code: 'console.log(\'ВАШ ТЕКСТ\')',
         },
         {
             id: '4',
@@ -56,7 +57,7 @@ const article:Article = {
         {
             id: '5',
             type: ArticleBlockType.CODE,
-            code: "console.log('Hello World!');",
+            code: 'console.log(\'Hello World!\');',
         },
         {
             id: '6',
@@ -73,5 +74,10 @@ const article:Article = {
     ],
 };
 
-export const Normal = Template.bind({});
-Normal.args = {};
+export const Primary = Template.bind({});
+Primary.args = {};
+Primary.decorators = [StoreDecorator({
+    articleDetails: {
+        data,
+    },
+})];

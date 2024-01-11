@@ -28,34 +28,72 @@
       "text": "Great article!",
       "articleId": "1",
       "userId": 2
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "Great!",
+      "id": "pCDsUzf"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "Like it, but too short ",
+      "id": "_u5eP2g"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "Needs to be redone",
+      "id": "TdNc4oz"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "Пойдет...",
+      "id": "jLceXzT"
     }
   ],
   "users": [
     {
       "id": "1",
-      "username": "admin",
+      "username": "Drekar",
       "password": "123",
       "role": "admin",
       "avatar": "https://s0.rbk.ru/v6_top_pics/media/img/6/67/756484737186676.jpg"
     },
     {
       "id": "2",
-      "username": "KittyCat",
+      "username": "VerveParisienne",
       "password": "1234",
       "role": "user",
-      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/RedCat_8727.jpg/1200px-RedCat_8727.jpg"
+      "avatar": "https://99px.ru/sstorage/56/2015/01/image_562801151304196937981.jpg"
     }
   ],
-  "profile": {
-    "first": "Сашка",
-    "lastname": "Трошин",
-    "age": 27,
-    "currency": "RUB",
-    "country": "France",
-    "city": "Октябрьский",
-    "username": "Drekar",
-    "avatar": "https://s0.rbk.ru/v6_top_pics/media/img/6/67/756484737186676.jpg"
-  },
+  "profile": [
+    {
+      "id": "1",
+      "first": "Александр",
+      "lastname": "Трошин",
+      "age": 27,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Казань",
+      "username": "Drekar",
+      "avatar": "https://s0.rbk.ru/v6_top_pics/media/img/6/67/756484737186676.jpg"
+    },
+    {
+      "id": "2",
+      "first": "Juliette",
+      "lastname": "Leclerc",
+      "age": 30,
+      "currency": "USD",
+      "country": "France",
+      "city": "Lyon",
+      "username": "VerveParisienne",
+      "avatar": "https://99px.ru/sstorage/56/2015/01/image_562801151304196937981.jpg"
+    }
+  ],
   "articles": [
     {
       "id": "1",
@@ -63,7 +101,9 @@
       "img": "https://bairesdev.mo.cloudinary.net/blog/2023/08/What-Is-JavaScript-Used-For.jpg",
       "views": 1022,
       "createdAt": "27.09.2023",
-      "tags": ["IT"],
+      "tags": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
