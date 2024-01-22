@@ -1,34 +1,37 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Article } from 'entities/Article';
-import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
-import { StoreDecorator } from 'shared/config/storybook/Decorators/StoreDecorator';
-import ArticleDetailsPage from './ArticleDetailsPage';
+import { Theme } from 'app/providers/ThemeProvider';
+import { Article, ArticleView } from 'entities/Article';
+import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
+import { ArticleListItem } from './ArticleListItem';
 
 export default {
-    title: 'pages/ArticleDetailsPage',
-    component: ArticleDetailsPage,
+    title: 'entities/Article/ArticleListItem',
+    component: ArticleListItem,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof ArticleDetailsPage>;
+} as ComponentMeta<typeof ArticleListItem>;
 
-const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => <ArticleDetailsPage {...args} />;
+const Template: ComponentStory<typeof ArticleListItem> = (args) => <ArticleListItem {...args} />;
 
-const data: Article = {
+const article = {
     id: '1',
     title: 'JavaScript для начинающих. Урок 1',
     img: 'https://bairesdev.mo.cloudinary.net/blog/2023/08/What-Is-JavaScript-Used-For.jpg',
+    views: 1022,
     user: {
         id: '2',
         username: 'Drekar',
+        avatar: 'https://s0.rbk.ru/v6_top_pics/media/img/6/67/756484737186676.jpg',
     },
-    views: 1022,
     createdAt: '27.09.2023',
-    tags: [ArticleType.IT],
+    tags: [
+        'IT', 'SCIENCE', 'ECONOMY',
+    ],
     blocks: [
         {
             id: '1',
-            type: ArticleBlockType.TEXT,
+            type: 'TEXT',
             title: 'Вступление',
             paragraphs: [
                 'JavaScript - язык программирования!',
@@ -40,7 +43,7 @@ const data: Article = {
         },
         {
             id: '2',
-            type: ArticleBlockType.TEXT,
+            type: 'TEXT',
             title: 'Погнали (Hello world)',
             paragraphs: [
                 'Принято в мире IT начинать изучение чего либо с "hello world" приложения.\nЭто довольно таки хорошая практика. Самое сложное, в изучении чего либо - начать, а начинать с чего то супер простого - не так сложно.',
@@ -48,40 +51,88 @@ const data: Article = {
         },
         {
             id: '3',
-            type: ArticleBlockType.CODE,
+            type: 'CODE',
             code: 'console.log(\'ВАШ ТЕКСТ\')',
         },
         {
             id: '4',
-            type: ArticleBlockType.TEXT,
+            type: 'TEXT',
             paragraphs: [
                 'В нашем случае для отображения нужной фразы пишем такое:',
             ],
         },
         {
             id: '5',
-            type: ArticleBlockType.CODE,
+            type: 'CODE',
             code: 'console.log(\'Hello World!\');',
         },
         {
             id: '6',
-            type: ArticleBlockType.IMAGE,
+            type: 'IMAGE',
             src: 'https://habrastorage.org/getpro/habr/upload_files/1bf/1f6/3e6/1bf1f63e680625c26877bb2d20f9f651.png',
         },
         {
             id: '7',
-            type: ArticleBlockType.TEXT,
+            type: 'TEXT',
             paragraphs: [
                 'Если получилось - поздравляю! Вы теперь JS разработчик)',
             ],
         },
     ],
+} as Article;
+
+export const Big = Template.bind({});
+Big.args = {
+    article,
+    view: ArticleView.BIG,
 };
 
-export const Primary = Template.bind({});
-Primary.args = {};
-Primary.decorators = [StoreDecorator({
-    articleDetails: {
-        data,
-    },
-})];
+export const BigLoading = Template.bind({});
+BigLoading.args = {
+    article,
+    isLoading: true,
+    view: ArticleView.BIG,
+};
+
+export const DarkBig = Template.bind({});
+DarkBig.args = {
+    article,
+    view: ArticleView.BIG,
+};
+DarkBig.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const DarkBigLoading = Template.bind({});
+DarkBigLoading.args = {
+    article,
+    isLoading: true,
+    view: ArticleView.BIG,
+};
+DarkBigLoading.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const Small = Template.bind({});
+Small.args = {
+    article,
+    view: ArticleView.SMALL,
+};
+
+export const SmallLoading = Template.bind({});
+SmallLoading.args = {
+    article,
+    isLoading: true,
+    view: ArticleView.SMALL,
+};
+
+export const DarkSmall = Template.bind({});
+DarkSmall.args = {
+    article,
+    view: ArticleView.SMALL,
+};
+DarkSmall.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const DarkSmallLoading = Template.bind({});
+DarkSmallLoading.args = {
+    article,
+    isLoading: true,
+    view: ArticleView.SMALL,
+};
+DarkSmallLoading.decorators = [ThemeDecorator(Theme.DARK)];

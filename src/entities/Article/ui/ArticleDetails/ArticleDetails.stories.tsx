@@ -5,7 +5,7 @@ import { StoreDecorator } from 'shared/config/storybook/Decorators/StoreDecorato
 import { ArticleDetails } from './ArticleDetails';
 
 export default {
-    title: 'entities/ArticleDetails',
+    title: 'entities/Article/ArticleDetails',
     component: ArticleDetails,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -20,6 +20,11 @@ const article:Article = {
     subtitle: 'Whats new in js while 2022',
     img: 'https://bairesdev.mo.cloudinary.net/blog/2023/08/What-Is-JavaScript-Used-For.jpg',
     views: 1022,
+    user: {
+        id: '2',
+        username: 'Drekar',
+        avatar: 'https://s0.rbk.ru/v6_top_pics/media/img/6/67/756484737186676.jpg',
+    },
     createdAt: '27.09.2023',
     tags: [ArticleType.IT],
     blocks: [

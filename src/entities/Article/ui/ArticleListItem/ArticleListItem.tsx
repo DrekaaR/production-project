@@ -1,0 +1,103 @@
+import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
+import { memo, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
+import ViewIcon from 'shared/assets/icons/eye.svg';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { ArticleTextBlockComponent } from '../../ui/ArticleTextBlockComponent/ArticleTextBlockComponent';
+import {
+    Article, ArticleBlockType, ArticleTextBlock, ArticleView,
+} from '../../model/types/article';
+import cls from './ArticleListItem.module.scss';
+
+export interface ArticleListItemProps {
+    className?: string;
+    article: Article;
+    view: ArticleView;
+    isLoading?: boolean;
+}
+
+export const ArticleListItem = memo((props: ArticleListItemProps) => {
+    const {
+        className, article, view, isLoading, 
+    } = props;
+    const { t } = useTranslation('article');
+    const navigate = useNavigate();
+
+    const onOpenArticle = useCallback(() => {
+        navigate(RoutePath.article_details + article.id);
+    }, [article.id, navigate]);
+
+    const date = <div className={cls.date}>{article.createdAt}</div>;
+    const title = <div className={cls.title}>{article.title}</div>;
+    const image = (
+        <div className={cls.image}>
+            <img src={article.img} alt={article.title} />
+        </div>
+    );
+    const views = (
+        <div className={cls.views}>
+            {String(article.views)}
+            <ViewIcon />
+        </div>
+    );
+
+    if (isLoading) {
+        return <ArticleListItemSkeleton view={view} />;
+    }
+
+    if (view === ArticleView.BIG) {
+        const textBlock = article.blocks.find(
+            (block) => block.type === ArticleBlockType.TEXT,
+        ) as ArticleTextBlock;
+
+        return (
+            <div className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
+                <div className={cls.header}>
+                    <div>
+                        <div className={cls.author}>
+                            <Avatar src={article.user.avatar} size={50} />
+                            {article.user.username}
+                        </div>
+                        {title}
+                        <div className={cls.tags}>
+                            {article.tags.map((tag) => <span>{tag}</span>)}
+                        </div>
+                    </div>
+                    {date}
+                </div>
+                {image}
+                {textBlock && (
+                    <ArticleTextBlockComponent className={cls.text} block={textBlock} />
+                )}
+                <div className={cls.footer}>
+                    <Button onClick={onOpenArticle} theme={ButtonTheme.OUTLINE}>
+                        {t('Show more')}
+                    </Button>
+                    {views}
+                </div>
+            </div>
+        );
+    }
+
+    return (
+        <button
+            onClick={onOpenArticle}
+            type="button"
+            className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
+        >
+            {date}
+            {image}
+            <div className={cls.content}>
+                <div className={cls.contentInfo}>
+                    <div>{article.tags.join(', ')}</div>
+                    {views}
+                </div>
+                {title}
+            </div>
+        </button>
+    );
+});
