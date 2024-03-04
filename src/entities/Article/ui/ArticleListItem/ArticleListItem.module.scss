@@ -2,47 +2,56 @@
     position: relative;
     border-radius: 10px;
     overflow: hidden;
+}
 
-    &.SMALL {
-        display: inline-block;
+.ArticleListItem.BIG {
+    border: 1px solid var(--border-color);
 
-        &.loading {
-            .date {
-                top: 10px;
-                right: 10px;
-            }
-            .content {
-                border: 1px solid var(--border-color);
-                border-top: 0;
-                background-color: transparent;
-                border-radius: 0 0 10px 10px;
-            }
+    &.loading {
+        .image {
+            border-left: none !important;
+            border-right: none !important;
         }
 
-        @media (any-hover: hover) {
-            &:hover {
-                .image img {
-                    transform: scale(1.05);
-                }
-            }
+        .text::after {
+            display: none;
+        }
+
+        .tags > * {
+            background-color: transparent;
+        }
+    }
+}
+
+.ArticleListItem.SMALL {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+    height: 100%;
+
+    .content {
+        flex: 1 1 auto;
+    }
+
+    &.loading {
+        .date {
+            top: 10px;
+            right: 10px;
+        }
+
+        .content {
+            border: 1px solid var(--border-color);
+            border-top: 0;
+            background-color: transparent;
+            border-radius: 0 0 10px 10px;
         }
     }
 
-    &.BIG {
-        border: 1px solid var(--border-color);
-
-        &.loading {
-            .image {
-                border-left: none !important;
-                border-right: none !important;
-            }
-
-            .text::after {
-                display: none;
-            }
-
-            .tags > * {
-                background-color: transparent;
+    @media (any-hover: hover) {
+        &:hover {
+            .image img {
+                transform: scale(1.05);
             }
         }
     }
@@ -51,6 +60,7 @@
 .image {
     position: relative;
     overflow: hidden;
+    width: 100%;
     img {
         position: absolute;
         width: 100%;
@@ -90,7 +100,7 @@
 
     .title {
         font-size: 24px;
-        line-height: 1.2;
+        line-height: 1.4;
         margin-bottom: 10px;
     }
 
@@ -151,6 +161,10 @@
         right: 0;
         padding: 5px 10px;
         font-size: 14px;
+    }
+
+    .title {
+        line-height: 1.4;
     }
 
     .image {

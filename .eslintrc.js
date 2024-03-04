@@ -38,6 +38,7 @@ module.exports = {
         // Semantic start
         'jsx-a11y/no-static-element-interactions': 'off',
         'jsx-a11y/click-events-have-key-events': 'off',
+        'jsx-a11y/control-has-associated-label': 'off',
         // Semantic end
         'no-unused-vars': 'off',
         'react/require-default-props': 'off',
@@ -54,6 +55,7 @@ module.exports = {
         'no-param-reassign': 'off',
         'no-undef': 'off',
         'lines-between-class-members': 'off',
+        'react/no-array-index-key': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
             ignoreAttribute: ['data-testid', 'to'],

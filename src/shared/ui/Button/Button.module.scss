@@ -1,7 +1,7 @@
 $height: 45px;
 
 .Button {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -49,6 +49,7 @@ $height: 45px;
     background: none;
     border: none;
     outline: none;
+    padding: 0 5px;
 
     @media (any-hover: hover) {
         &:hover {
