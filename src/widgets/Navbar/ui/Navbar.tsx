@@ -32,7 +32,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     }, [dispatch]);
 
     return (
-        <div
+        <header
             data-testid="navbar"
             className={classNames(cls.Navbar, {}, [className])}
         >
@@ -53,6 +53,6 @@ export const Navbar = memo(({ className }: NavbarProps) => {
                     <LangSwitcher />
                 </div>
             </div>
-        </div>
+        </header>
     );
 });

@@ -22,7 +22,7 @@ export interface ArticleListItemProps {
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
     const {
-        className, article, view, isLoading, 
+        className, article, view, isLoading,
     } = props;
     const { t } = useTranslation('article');
     const navigate = useNavigate();
@@ -32,7 +32,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     }, [article.id, navigate]);
 
     const date = <div className={cls.date}>{article.createdAt}</div>;
-    const title = <div className={cls.title}>{article.title}</div>;
+    const title = <h2 className={cls.title}>{article.title}</h2>;
     const image = (
         <div className={cls.image}>
             <img src={article.img} alt={article.title} />
@@ -55,7 +55,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         ) as ArticleTextBlock;
 
         return (
-            <div className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
+            <article className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
                 <div className={cls.header}>
                     <div>
                         <div className={cls.author}>
@@ -79,25 +79,23 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     </Button>
                     {views}
                 </div>
-            </div>
+            </article>
         );
     }
 
     return (
-        <button
-            onClick={onOpenArticle}
-            type="button"
-            className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
-        >
-            {date}
-            {image}
-            <div className={cls.content}>
-                <div className={cls.contentInfo}>
-                    <div>{article.tags.join(', ')}</div>
-                    {views}
+        <article className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
+            <button onClick={onOpenArticle} type="button" className={cls.body}>
+                {date}
+                {image}
+                <div className={cls.content}>
+                    <div className={cls.contentInfo}>
+                        <div>{article.tags.join(', ')}</div>
+                        {views}
+                    </div>
+                    {title}
                 </div>
-                {title}
-            </div>
-        </button>
+            </button>
+        </article>
     );
 });

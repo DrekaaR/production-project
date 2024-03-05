@@ -1,0 +1,6 @@
+.Page {
+    padding: var(--container-padding);
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100vh - var(--navbar-height-fixed));
+}

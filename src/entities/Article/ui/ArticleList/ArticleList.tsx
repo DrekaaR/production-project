@@ -13,27 +13,20 @@ interface ArticleListProps {
     view?: ArticleView;
 }
 
+const getSkeletons = (view: ArticleView) => new Array(view === ArticleView.SMALL ? 9 : 4)
+    .fill(0)
+    .map((item, index) => (
+        <ArticleListItemSkeleton key={index} view={view} />
+    ));
+
 export const ArticleList = memo((props: ArticleListProps) => {
     const {
         className, articles, isLoading, view = ArticleView.BIG,
     } = props;
     const { t } = useTranslation();
 
-    if (isLoading) {
-        return (
-            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-                {new Array(view === ArticleView.SMALL ? 9 : 3)
-                    .fill(0)
-                    .map((item, index) => (
-                        <ArticleListItemSkeleton key={index} view={view} />
-                    ))}
-            </div>
-        );
-    }
-
     const renderArticle = (article: Article) => (
         <ArticleListItem
-            isLoading={isLoading}
             key={article.id}
             article={article}
             view={view}
@@ -43,6 +36,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
     return (
         <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
             {articles.length ? articles.map(renderArticle) : null}
+            {isLoading && getSkeletons(view)}
         </div>
     );
 });

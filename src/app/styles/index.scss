@@ -20,10 +20,3 @@
     display: grid;
     grid-template-columns: auto 1fr;
 }
-
-.page-wrapper {
-    padding: var(--container-padding);
-    overflow-y: auto;
-    overflow-x: hidden;
-    height: calc(100vh - var(--navbar-height-fixed));
-}

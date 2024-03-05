@@ -24,11 +24,16 @@
 }
 
 .ArticleListItem.SMALL {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    text-align: left;
     height: 100%;
+
+    .body {
+        text-align: left;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
 
     .content {
         flex: 1 1 auto;
@@ -61,6 +66,7 @@
     position: relative;
     overflow: hidden;
     width: 100%;
+
     img {
         position: absolute;
         width: 100%;
@@ -129,7 +135,7 @@
     .text {
         position: relative;
         padding: 15px;
-        margin-bottom: 0;
+        margin-bottom: 0 !important;
         max-height: 250px;
         overflow: hidden;
 

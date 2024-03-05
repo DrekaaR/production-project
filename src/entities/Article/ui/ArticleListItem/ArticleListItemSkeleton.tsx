@@ -1,8 +1,8 @@
 import { ArticleView } from 'entities/Article';
-import cls from 'entities/Article/ui/ArticleListItem/ArticleListItem.module.scss';
 import { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
+import cls from './ArticleListItem.module.scss';
 
 export interface ArticleListItemSkeletonProps {
     className?: string;
@@ -33,10 +33,10 @@ export const ArticleListItemSkeleton = memo((props: ArticleListItemSkeletonProps
                 </div>
                 <Skeleton height={240} width="100%" className={cls.image} />
                 <div className={cls.text}>
-                    <Skeleton height={100} width="100%" />
+                    <Skeleton height={235} width="100%" />
                 </div>
                 <div className={cls.footer}>
-                    <Skeleton height={42} width={125} />
+                    <Skeleton height={45} width={125} />
                     <Skeleton className={cls.views} height={21} width={60} />
                 </div>
             </div>
