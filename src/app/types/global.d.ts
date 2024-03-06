@@ -16,10 +16,14 @@ declare module '*.svg' {
     export default SVG;
 }
 
+declare const __IS_DEV__: boolean;
+declare const __API__: string;
+declare const __PROJECT__: 'story' | 'jest' | 'frontend';
+
 type DeepPartial<T> = T extends object ? {
     [P in keyof T]?: DeepPartial<T[P]>;
 } : T;
 
-declare const __IS_DEV__: boolean;
-declare const __API__: string;
-declare const __PROJECT__: 'story' | 'jest' | 'frontend';
+type OptionalRecord<K extends keyof any, T> = {
+    [P in K]?: T;
+};

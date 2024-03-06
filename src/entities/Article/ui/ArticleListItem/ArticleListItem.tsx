@@ -64,7 +64,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                         </div>
                         {title}
                         <div className={cls.tags}>
-                            {article.tags.map((tag) => <span>{tag}</span>)}
+                            {article.tags.map((tag) => <span key={tag}>{tag}</span>)}
                         </div>
                     </div>
                     {date}

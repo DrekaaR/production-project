@@ -47,7 +47,7 @@ export const ArticleListItemSkeleton = memo((props: ArticleListItemSkeletonProps
         <div className={classNames(cls.ArticleListItem, {}, additional)}>
             <Skeleton className={cls.date} height={21} width={50} />
             {/* eslint-disable-next-line i18next/no-literal-string */}
-            <Skeleton height={250} width="100%" borderRadius="10px 10px 0 0" />
+            <Skeleton height={300} width="100%" borderRadius="10px 10px 0 0" />
             <div className={cls.content}>
                 <div className={cls.contentInfo}>
                     <Skeleton height={21} width={60} />
