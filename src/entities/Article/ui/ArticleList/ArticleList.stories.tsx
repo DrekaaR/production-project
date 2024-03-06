@@ -94,5 +94,11 @@ export const articles = {
 
 export const Normal = Template.bind({});
 Normal.args = {
-    articles: [articles, articles],
+    articles: [articles, articles, articles],
+};
+
+export const isLoading = Template.bind({});
+isLoading.args = {
+    isLoading: true,
+    articles: [],
 };
