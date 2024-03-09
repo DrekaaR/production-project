@@ -1,10 +1,9 @@
 import {
-    CombinedState, configureStore, Reducer, ReducersMapObject, 
+    CombinedState, configureStore, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit';
-import { To } from '@remix-run/router';
 import { createReducerManager } from 'app/providers/StoreProvider/config/reducerManager';
 import { userReducer } from 'entities/User';
-import { NavigateOptions } from 'react-router/dist/lib/context';
+import { scrollSaveReducer } from 'features/ScrollSave';
 import { $api } from 'shared/api/api';
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 
@@ -15,6 +14,7 @@ export function createReduxStore(
     const rootReducer: ReducersMapObject<StateSchema> = {
         ...asyncReducers,
         user: userReducer,
+        scrollSave: scrollSaveReducer,
     };
 
     const reducerManager = createReducerManager(rootReducer);

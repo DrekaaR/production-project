@@ -8,11 +8,13 @@ import { ProfileScheme } from 'entities/Profile';
 import { UserSchema } from 'entities/User';
 import { AddCommentFormSchema } from 'features/AddCommentForm';
 import { LoginSchema } from 'features/AuthByUsername';
+import { ScrollSaveSchema } from 'features/ScrollSave';
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 import { ArticlePageSchema } from 'pages/ArticlesPage';
 
 export interface StateSchema {
     user: UserSchema;
+    scrollSave: ScrollSaveSchema;
 
     // Async reducers
     loginForm?: LoginSchema;
