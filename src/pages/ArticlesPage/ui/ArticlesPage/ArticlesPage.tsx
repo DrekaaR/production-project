@@ -48,7 +48,9 @@ const ArticlesPage = (props: ArticlesPageProps) => {
 
     if (error) {
         return (
-            <Text title={t('An error occurred while the articles was loading')} />
+            <Page className={classNames(cls.ArticlesPage, {}, [className])}>
+                <Text title={t('An error occurred while the articles was loading')} />
+            </Page>
         );
     }
 

@@ -1,9 +1,11 @@
 {
   "All articles": "All articles",
+  "An error occurred while the articles was loading": "An error occurred while the articles was loading",
   "Articles is not found": "Articles is not found",
   "By": "By",
   "Economy": "Economy",
   "IT": "IT",
+  "No articles were found": "No articles were found",
   "Order": "Order",
   "Science": "Science",
   "Search": "",
@@ -13,7 +15,5 @@
   "by title": "by title",
   "by views": "by views",
   "date of creation": "date of creation",
-  "descending": "descending",
-  "An error occurred while the articles was loading": "An error occurred while the articles was loading",
-  "No articles were found": "No articles were found"
+  "descending": "descending"
 }

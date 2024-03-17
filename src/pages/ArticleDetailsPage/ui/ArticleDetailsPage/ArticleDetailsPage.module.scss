@@ -10,6 +10,7 @@
     margin-bottom: 15px;
 }
 
-.form:not(:last-child) {
+.form:not(:last-child),
+.recommendations:not(:last-child) {
     margin-bottom: 30px;
 }
