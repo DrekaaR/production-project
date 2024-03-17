@@ -1,3 +1,18 @@
 {
-  "Show more": "Show more"
+  "Show more": "Show more",
+  "ascending": "ascending",
+  "descending": "descending",
+  "Sort by": "Sort by",
+  "Order": "Order",
+  "By": "By",
+  "date of creation": "date of creation",
+  "by title": "by title",
+  "by views": "by views",
+  "All articles": "All articles",
+  "IT": "IT",
+  "Economy": "Economy",
+  "Science": "Science",
+  "Articles is not found": "Articles is not found",
+  "An error occurred while the articles was loading": "An error occurred while the articles was loading",
+  "No articles were found": "No articles were found"
 }

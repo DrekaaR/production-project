@@ -1,0 +1,25 @@
+.Tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tab.selected {
+    background-color: var(--invert-bg-color);
+    color: var(--invert-text-color);
+}
+
+.tab {
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: 5px 15px;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: var(--invert-bg-color);
+            color: var(--invert-text-color);
+        }
+    }
+}

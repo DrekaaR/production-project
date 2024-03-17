@@ -14,7 +14,7 @@ export default {
 
 const Template: ComponentStory<typeof ArticleDetails> = (args) => <ArticleDetails {...args} />;
 
-const article:Article = {
+const article = {
     id: '1',
     title: 'JS news',
     subtitle: 'Whats new in js while 2022',
@@ -26,7 +26,7 @@ const article:Article = {
         avatar: 'https://s0.rbk.ru/v6_top_pics/media/img/6/67/756484737186676.jpg',
     },
     createdAt: '27.09.2023',
-    tags: [ArticleType.IT],
+    type: [ArticleType.IT],
     blocks: [
         {
             id: '1',
@@ -36,22 +36,22 @@ const article:Article = {
                 'According to some studies, by the way, it is the most popular. And certainly one of the easiest to get into IT.',
                 'In general, web development is, in my opinion, a very welcoming place for beginners and offers a multitude of opportunities. So rejoice, dear young developers from around the world who are reading this article right now.',
                 'In many ways, the language is popular due to the development of the web. After all, it monopolized the browser and is, with rare exceptions, the only language capable of creating animations and validating forms, implementing almost any complex logic on the client side (in the browser).',
-                "The modern web is not just simple websites and online stores from the 2000s, but mostly complex and interesting web applications. In addition to client-side logic, JavaScript is also popular on the server. And its popularity there is growing year by year. Furthermore, JavaScript allows you to write mobile applications and even ventures a bit into desktop applications.\nIn short, it's one language with many possibilities.",
+                'The modern web is not just simple websites and online stores from the 2000s, but mostly complex and interesting web applications. In addition to client-side logic, JavaScript is also popular on the server. And its popularity there is growing year by year. Furthermore, JavaScript allows you to write mobile applications and even ventures a bit into desktop applications.\nIn short, it\'s one language with many possibilities.',
             ],
         },
         {
             id: '2',
             type: ArticleBlockType.TEXT,
-            title: "Let's go (Hello world)\n",
+            title: 'Let\'s go (Hello world)\n',
             paragraphs: [
-                "In the world of IT, it's widely accepted to begin learning anything with a \"hello world\" application. It's a pretty good practice. The most challenging part of learning something new is to start, and starting with something super simple is not that difficult.",
-                "I've prepared a mini-project for you in CodeSandbox. That's where we'll be working:",
+                'In the world of IT, it\'s widely accepted to begin learning anything with a "hello world" application. It\'s a pretty good practice. The most challenging part of learning something new is to start, and starting with something super simple is not that difficult.',
+                'I\'ve prepared a mini-project for you in CodeSandbox. That\'s where we\'ll be working:',
             ],
         },
         {
             id: '3',
             type: ArticleBlockType.CODE,
-            code: "console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ')console.log('ВАШ ТЕКСТ') console.log('ВАШ ТЕКСТ');",
+            code: 'console.log(\'ВАШ ТЕКСТ\') console.log(\'ВАШ ТЕКСТ\') console.log(\'ВАШ ТЕКСТ\') console.log(\'ВАШ ТЕКСТ\') console.log(\'ВАШ ТЕКСТ\') console.log(\'ВАШ ТЕКСТ\') console.log(\'ВАШ ТЕКСТ\')console.log(\'ВАШ ТЕКСТ\') console.log(\'ВАШ ТЕКСТ\');',
         },
         {
             id: '4',
@@ -63,7 +63,7 @@ const article:Article = {
         {
             id: '5',
             type: ArticleBlockType.CODE,
-            code: "console.log('Hello World!');",
+            code: 'console.log(\'Hello World!\');',
         },
         {
             id: '6',
@@ -79,7 +79,7 @@ const article:Article = {
             ],
         },
     ],
-};
+} as Article;
 
 export const Normal = Template.bind({});
 Normal.args = {};

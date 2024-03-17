@@ -24,7 +24,7 @@ const data: Article = {
     },
     views: 1022,
     createdAt: '27.09.2023',
-    tags: [ArticleType.IT],
+    type: [ArticleType.IT],
     blocks: [
         {
             id: '1',

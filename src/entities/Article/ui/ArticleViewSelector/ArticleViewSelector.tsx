@@ -1,8 +1,7 @@
 import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
 import ListIcon from 'shared/assets/icons/list.svg';
 import TilesIcon from 'shared/assets/icons/tiles.svg';
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { ArticleView } from '../../model/types/article';
 import cls from './ArticleViewSelector.module.scss';
@@ -26,7 +25,6 @@ const viewTypes = [
 
 export const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
     const { className, view, onViewClick } = props;
-    const { t } = useTranslation();
 
     const onClick = (newView: ArticleView) => () => {
         onViewClick?.(newView);

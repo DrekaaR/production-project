@@ -4,13 +4,13 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import ViewIcon from 'shared/assets/icons/eye.svg';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { ArticleTextBlockComponent } from '../../ui/ArticleTextBlockComponent/ArticleTextBlockComponent';
 import {
-    Article, ArticleBlockType, ArticleTextBlock, ArticleView,
+    Article, ArticleBlockType, ArticleTextBlock, ArticleView, 
 } from '../../model/types/article';
+import { ArticleTextBlockComponent } from '../../ui/ArticleTextBlockComponent/ArticleTextBlockComponent';
 import cls from './ArticleListItem.module.scss';
 
 export interface ArticleListItemProps {
@@ -64,7 +64,9 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                         </div>
                         {title}
                         <div className={cls.tags}>
-                            {article.tags.map((tag) => <span key={tag}>{tag}</span>)}
+                            {article.type.map((tag) => (
+                                <span key={tag}>{tag}</span>
+                            ))}
                         </div>
                     </div>
                     {date}
@@ -90,7 +92,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                 {image}
                 <div className={cls.content}>
                     <div className={cls.contentInfo}>
-                        <div>{article.tags.join(', ')}</div>
+                        {article.type.join(', ')}
                         {views}
                     </div>
                     {title}

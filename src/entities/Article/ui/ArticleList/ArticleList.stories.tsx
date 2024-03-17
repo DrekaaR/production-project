@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Article } from 'entities/Article';
+import { Article, ArticleType } from 'entities/Article';
 import { ArticleList } from './ArticleList';
 
 export default {
@@ -23,9 +23,7 @@ export const articles = {
         avatar: 'https://s0.rbk.ru/v6_top_pics/media/img/6/67/756484737186676.jpg',
     },
     createdAt: '27.09.2023',
-    tags: [
-        'IT', 'SCIENCE', 'ECONOMY',
-    ],
+    type: [ArticleType.IT],
     blocks: [
         {
             id: '1',

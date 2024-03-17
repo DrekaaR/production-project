@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Article, ArticleView } from 'entities/Article';
+import { Article, ArticleType, ArticleView } from 'entities/Article';
 import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
 import { ArticleListItem } from './ArticleListItem';
 
@@ -25,9 +25,7 @@ const article = {
         avatar: 'https://s0.rbk.ru/v6_top_pics/media/img/6/67/756484737186676.jpg',
     },
     createdAt: '27.09.2023',
-    tags: [
-        'IT', 'SCIENCE', 'ECONOMY',
-    ],
+    type: [ArticleType.IT],
     blocks: [
         {
             id: '1',

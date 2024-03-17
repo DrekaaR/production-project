@@ -1,0 +1,23 @@
+.ArticlesPageFilters {
+    margin-bottom: 20px;
+}
+
+.sortWrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+
+.search {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.tabs {
+    margin-top: 15px;
+}

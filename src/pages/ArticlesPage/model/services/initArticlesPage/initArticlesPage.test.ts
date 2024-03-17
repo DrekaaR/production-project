@@ -3,6 +3,8 @@ import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList';
 import { initArticlesPage } from './initArticlesPage';
 
 jest.mock('../fetchArticlesList/fetchArticlesList');
+const params = new URLSearchParams();
+params.set('order', 'adc');
 
 describe('initArticlesPage.test', () => {
     test('if inited false', async () => {
@@ -12,10 +14,10 @@ describe('initArticlesPage.test', () => {
             },
         });
 
-        await thunk.callThunk();
+        await thunk.callThunk(params);
 
-        expect(thunk.dispatch).toBeCalledTimes(4);
-        expect(fetchArticlesList).toBeCalledWith({ page: 1 });
+        expect(thunk.dispatch).toBeCalledTimes(5);
+        expect(fetchArticlesList).toBeCalledWith({});
     });
 
     test('if inited true', async () => {
@@ -25,7 +27,7 @@ describe('initArticlesPage.test', () => {
             },
         });
 
-        await thunk.callThunk();
+        await thunk.callThunk(params);
 
         expect(thunk.dispatch).toBeCalledTimes(2);
         expect(fetchArticlesList).not.toBeCalled();
