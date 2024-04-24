@@ -7,7 +7,7 @@ export const fetchArticleRecommendations = createAsyncThunk<
     string | undefined,
     ThunkConfig<string>
 >(
-    'articleDetails/fetchArticleRecommendations',
+    'articleDetailsPage/fetchArticleRecommendations',
     async (props, thunkAPI) => {
         const { extra, rejectWithValue } = thunkAPI;
 
