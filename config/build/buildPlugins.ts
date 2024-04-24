@@ -25,6 +25,7 @@ export function buildPlugins({
         }),
         new BundleAnalyzerPlugin({
             openAnalyzer: false,
+            analyzerMode: 'disabled',
         }),
         new CopyPlugin({
             patterns: [
