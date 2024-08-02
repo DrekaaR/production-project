@@ -2,15 +2,8 @@
     margin-bottom: 20px;
 }
 
-.sortWrapper {
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
-    justify-content: space-between;
-
-    &:not(:last-child) {
-        margin-bottom: 15px;
-    }
+.sortWrapper:not(:last-child) {
+    margin-bottom: 15px;
 }
 
 .search {

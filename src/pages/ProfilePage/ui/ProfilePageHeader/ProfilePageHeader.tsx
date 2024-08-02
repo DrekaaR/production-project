@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { HStack } from 'shared/ui/Stack';
 import { Text } from 'shared/ui/Text/Text';
 import cls from './ProfilePageHeader.module.scss';
 
@@ -37,26 +38,26 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
     }, [dispatch]);
 
     return (
-        <div className={classNames(cls.ProfilePageHeader, {}, [className])}>
+        <HStack justify="between" className={classNames(cls.ProfilePageHeader, {}, [className])}>
             <Text title={t('Profile')} />
             {canEdit && (
-                <div>
+                <HStack gap="12">
                     {readonly ? (
                         <Button onClick={onEdit} theme={ButtonTheme.OUTLINE}>
                             {t('Edit')}
                         </Button>
                     ) : (
-                        <div className={cls.buttons}>
+                        <>
                             <Button onClick={onSave} theme={ButtonTheme.OUTLINE}>
                                 {t('Save')}
                             </Button>
                             <Button onClick={onCancelEdit} theme={ButtonTheme.OUTLINE_RED}>
                                 {t('Cancel')}
                             </Button>
-                        </div>
+                        </>
                     )}
-                </div>
+                </HStack>
             )}
-        </div>
+        </HStack>
     );
 };

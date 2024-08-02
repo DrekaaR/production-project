@@ -1,13 +1,13 @@
 import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
-import { HTMLAttributeAnchorTarget, memo, useCallback } from 'react';
+import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
 import ViewIcon from 'shared/assets/icons/eye.svg';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { Flex, HStack } from 'shared/ui/Stack';
 import {
     Article, ArticleBlockType, ArticleTextBlock, ArticleView, 
 } from '../../model/types/article';
@@ -36,10 +36,10 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         </div>
     );
     const views = (
-        <div className={cls.views}>
+        <HStack gap="4" className={cls.views}>
             {String(article.views)}
             <ViewIcon />
-        </div>
+        </HStack>
     );
 
     if (isLoading) {
@@ -53,33 +53,33 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 
         return (
             <article className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
-                <div className={cls.header}>
+                <HStack gap="22" justify="between" align="start" className={cls.header}>
                     <div>
-                        <div className={cls.author}>
+                        <HStack gap="8" className={cls.author}>
                             <Avatar src={article.user?.avatar} size={50} />
                             {article.user?.username}
-                        </div>
+                        </HStack>
                         {title}
-                        <div className={cls.tags}>
+                        <HStack gap="4" wrap className={cls.tags}>
                             {article.type.map((tag) => (
-                                <span key={tag}>{tag}</span>
+                                <Flex center key={tag}>{tag}</Flex>
                             ))}
-                        </div>
+                        </HStack>
                     </div>
                     {date}
-                </div>
+                </HStack>
                 {image}
                 {textBlock && (
                     <ArticleTextBlockComponent className={cls.text} block={textBlock} />
                 )}
-                <div className={cls.footer}>
+                <HStack gap="16" justify="between" className={cls.footer}>
                     <AppLink target={target} to={RoutePath.article_details + article.id}>
                         <Button theme={ButtonTheme.OUTLINE}>
                             {t('Show more')}
                         </Button>
                     </AppLink>
                     {views}
-                </div>
+                </HStack>
             </article>
         );
     }
@@ -94,10 +94,10 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                 {date}
                 {image}
                 <div className={cls.content}>
-                    <div className={cls.contentInfo}>
+                    <HStack gap="8" justify="between">
                         {article.type.join(', ')}
                         {views}
-                    </div>
+                    </HStack>
                     {title}
                 </div>
             </AppLink>

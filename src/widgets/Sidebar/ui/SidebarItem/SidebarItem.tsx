@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { HStack } from 'shared/ui/Stack';
 import { SidebarItemType } from 'widgets/Sidebar/model/types/sidebar';
 import cls from './SidebarItem.module.scss';
 
@@ -29,14 +30,13 @@ export const SidebarItem = ({ item, collapsed }: SidebarItemProps) => {
 
     return (
         <li className={classNames(cls.SidebarItem, mods)}>
-            <AppLink
-                to={item.path}
-                className={cls.item}
-            >
-                <item.Icon className={cls.icon} />
-                <span className={cls.title}>
-                    {t(item.text)}
-                </span>
+            <AppLink to={item.path} className={cls.link}>
+                <HStack gap="8">
+                    <item.Icon className={cls.icon} />
+                    <span className={cls.title}>
+                        {t(item.text)}
+                    </span>
+                </HStack>
             </AppLink>
         </li>
     );

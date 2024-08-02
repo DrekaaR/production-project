@@ -11,6 +11,7 @@ import { DynamicModuleLoader, ReducerList } from 'shared/lib/components/DynamicM
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
+import { HStack, VStack } from 'shared/ui/Stack';
 import { Text, TextSize } from 'shared/ui/Text/Text';
 import {
     getArticleDetailsData,
@@ -60,15 +61,15 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
     if (isLoading) {
         content = (
-            <>
-                <Skeleton className={cls.mainImage} width="100%" height={400} />
-                <Skeleton className={cls.title} width={600} height={32} />
-                <Skeleton className={cls.skeleton} width={300} height={24} />
-                <Skeleton className={cls.skeleton} width={100} height={24} />
-                <Skeleton className={cls.skeleton} width={100} height={24} />
-                <Skeleton className={cls.skeleton} width="100%" height={200} />
-                <Skeleton className={cls.skeleton} width="100%" height={200} />
-            </>
+            <VStack gap="22">
+                <Skeleton width="100%" height={400} />
+                <Skeleton width={600} height={32} />
+                <Skeleton width={300} height={24} />
+                <Skeleton width={100} height={24} />
+                <Skeleton width={100} height={24} />
+                <Skeleton width="100%" height={200} />
+                <Skeleton width="100%" height={200} />
+            </VStack>
         );
     } else if (error) {
         content = (
@@ -76,29 +77,29 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
         );
     } else {
         content = (
-            <>
+            <VStack gap="22">
                 <div className={cls.mainImage}>
                     <img src={article?.img} alt="" />
                 </div>
-                <Text className={cls.title} title={article?.title} text={article?.subtitle} size={TextSize.L} />
-                <div className={cls.articleInfo}>
-                    <div className={cls.infoItem}>
+                <Text title={article?.title} text={article?.subtitle} size={TextSize.L} />
+                <VStack gap="8" className={cls.articleInfo}>
+                    <HStack gap="8">
                         <EyeIcon />
                         <Text text={String(article?.views)} />
-                    </div>
-                    <div className={cls.infoItem}>
+                    </HStack>
+                    <HStack gap="8">
                         <CalendarIcon />
                         <Text text={article?.createdAt} />
-                    </div>
-                </div>
+                    </HStack>
+                </VStack>
                 {article?.blocks.map((block) => renderBlock(block))}
-            </>
+            </VStack>
         );
     }
 
     return (
         <DynamicModuleLoader removeAfterUnmount reducers={reducers}>
-            <div className={classNames(cls.ArticleDetails, {}, [className])}>
+            <div className={classNames('', {}, [className])}>
                 {content}
             </div>
         </DynamicModuleLoader>

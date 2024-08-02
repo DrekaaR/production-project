@@ -10,6 +10,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { useDebounce } from 'shared/lib/hooks/useDebounce';
 import { SortOrder } from 'shared/types';
 import { Input } from 'shared/ui/Input/Input';
+import { HStack } from 'shared/ui/Stack';
 import { TabItem, Tabs } from 'shared/ui/Tabs/Tabs';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { articlesPageActions } from '../../model/slices/articlesPageSlice';
@@ -91,7 +92,7 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
 
     return (
         <div className={classNames(cls.ArticlesPageFilters, {}, [className])}>
-            <div className={cls.sortWrapper}>
+            <HStack gap="8" justify="between" className={cls.sortWrapper}>
                 <ArticleSortSelect
                     sort={sort}
                     order={order}
@@ -102,7 +103,7 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
                     view={view}
                     onViewClick={onChangeView}
                 />
-            </div>
+            </HStack>
             <div className={cls.search}>
                 <Input
                     placeholder={t('Search')}

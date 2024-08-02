@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { SortOrder } from 'shared/types';
 import { Select, SelectOption } from 'shared/ui/Select/Select';
-import cls from './ArticleSortSelect.module.scss';
+import { HStack } from 'shared/ui/Stack';
 
 interface ArticleSortSelectProps {
     className?: string;
@@ -47,7 +47,7 @@ export const ArticleSortSelect = memo((props: ArticleSortSelectProps) => {
     ], [t]);
 
     return (
-        <div className={classNames(cls.ArticleSortSelect, {}, [className])}>
+        <HStack gap="16" className={classNames('', {}, [className])}>
             <Select
                 options={sortFilledOptions}
                 label={t('Sort by')}
@@ -60,6 +60,6 @@ export const ArticleSortSelect = memo((props: ArticleSortSelectProps) => {
                 value={order}
                 onChange={onChangeOrder}
             />
-        </div>
+        </HStack>
     );
 });

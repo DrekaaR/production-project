@@ -2,29 +2,14 @@
     width: 100%;
     background-color: var(--second-color);
     border-bottom: 1px solid var(--border-color);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .NavbarBody {
-    display: flex;
-    align-items: center;
     height: var(--navbar-height);
 }
 
-.links {
-    display: flex;
-    align-items: center;
-    column-gap: 30px;
-
-    a {
-        height: var(--navbar-height);
-    }
-}
-
-.switchers {
-    display: flex;
+.links a {
+    height: var(--navbar-height);
 }
 
 .loginButton,

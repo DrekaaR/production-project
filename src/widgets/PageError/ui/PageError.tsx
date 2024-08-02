@@ -1,6 +1,7 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { VStack } from 'shared/ui/Stack';
 import cls from './PageError.module.scss';
 
 interface PageErrorProps {
@@ -16,13 +17,16 @@ export const PageError = memo(({ className }: PageErrorProps) => {
     };
 
     return (
-        <div className={classNames(cls.PageError, {}, [className])}>
-            <div>
-                <p>{t('An unexpected error has occurred')}</p>
-                <button onClick={reloadPage} type="button">
-                    {t('Reload')}
-                </button>
-            </div>
-        </div>
+        <VStack
+            max
+            gap="16"
+            justify="center"
+            className={classNames(cls.PageError, {}, [className])}
+        >
+            <p>{t('An unexpected error has occurred')}</p>
+            <button onClick={reloadPage} type="button">
+                {t('Reload')}
+            </button>
+        </VStack>
     );
 });

@@ -1,6 +1,3 @@
-.ArticleDetails {
-}
-
 .mainImage {
     position: relative;
     height: 500px;
@@ -13,39 +10,9 @@
         left: 0;
         object-fit: cover;
     }
-
-    &:not(:last-child) {
-        margin-bottom: 20px;
-    }
-}
-
-.title {
-    &:not(:last-child) {
-        margin-bottom: 20px;
-    }
-}
-
-.skeleton {
-    &:not(:last-child) {
-        margin-bottom: 20px;
-    }
 }
 
 .articleInfo {
-    &:not(:last-child) {
-        margin-bottom: 20px;
-    }
-}
-
-.infoItem {
-    display: flex;
-    align-items: center;
-    column-gap: 8px;
-
-    &:not(:last-child) {
-        margin-bottom: 10px;
-    }
-
     svg {
         margin-top: -2px;
         font-size: 18px;

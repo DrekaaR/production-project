@@ -16,10 +16,13 @@ interface PageProps {
     className?: string;
     children: ReactNode;
     onScrollEnd?: () => void;
+    center?: boolean;
 }
 
 export const Page = memo((props: PageProps) => {
-    const { className, children, onScrollEnd } = props;
+    const {
+        className, children, onScrollEnd, center, 
+    } = props;
     const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>;
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
     const { pathname } = useLocation();
@@ -45,11 +48,15 @@ export const Page = memo((props: PageProps) => {
         }));
     }, 500);
 
+    const mods = {
+        [cls.centered]: center,
+    };
+
     return (
         <div
             onScroll={onScroll}
             ref={wrapperRef}
-            className={classNames(cls.Page, {}, [className])}
+            className={classNames(cls.Page, mods, [className])}
         >
             {children}
             {onScrollEnd && <div className={cls.trigger} ref={triggerRef} />}

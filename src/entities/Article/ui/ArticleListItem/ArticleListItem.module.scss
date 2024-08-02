@@ -78,30 +78,23 @@
     }
 }
 
-.views {
-    display: flex;
-    align-items: center;
-    column-gap: 5px;
-
-    svg {
-        margin-top: -2px;
-    }
+.views svg {
+    margin-top: -2px;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
 .BIG {
-    .header {
-        padding: 15px;
-        display: flex;
-        justify-content: space-between;
-        column-gap: 20px;
+    $padding: 20px;
+
+    .header,
+    .footer,
+    .text {
+        padding: $padding;
     }
 
     .author {
-        display: flex;
-        align-items: center;
-        column-gap: 8px;
         margin-bottom: 10px;
+        font-size: 18px;
     }
 
     .title {
@@ -110,22 +103,12 @@
         margin-bottom: 10px;
     }
 
-    .tags {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        flex-wrap: wrap;
-
-        & > * {
-            font-size: 12px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            line-height: 1.4;
-            background-color: var(--second-color);
-            padding: 2px 6px;
-            min-width: 25px;
-        }
+    .tags > * {
+        font-size: 12px;
+        line-height: 1.4;
+        background-color: var(--second-color);
+        padding: 2px 6px;
+        min-width: 25px;
     }
 
     .image {
@@ -134,7 +117,6 @@
 
     .text {
         position: relative;
-        padding: 15px;
         margin-bottom: 0 !important;
         max-height: 250px;
         overflow: hidden;
@@ -150,13 +132,6 @@
         }
     }
 
-    .footer {
-        padding: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        column-gap: 15px;
-    }
 }
 
 .SMALL {
@@ -180,16 +155,5 @@
     .content {
         padding: 15px;
         background-color: var(--second-color);
-    }
-
-    .contentInfo {
-        display: flex;
-        flex-wrap: wrap;
-        row-gap: 5px;
-        align-items: center;
-        column-gap: 15px;
-        justify-content: space-between;
-        margin-bottom: 10px;
-        font-size: 14px;
     }
 }

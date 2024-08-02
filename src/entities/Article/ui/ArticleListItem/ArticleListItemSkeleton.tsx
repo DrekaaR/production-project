@@ -2,6 +2,7 @@ import { ArticleView } from 'entities/Article';
 import { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
+import { HStack, VStack } from 'shared/ui/Stack';
 import cls from './ArticleListItem.module.scss';
 
 export interface ArticleListItemSkeletonProps {
@@ -16,29 +17,26 @@ export const ArticleListItemSkeleton = memo((props: ArticleListItemSkeletonProps
     if (view === ArticleView.BIG) {
         return (
             <div className={classNames(cls.ArticleListItem, {}, additional)}>
-                <div className={cls.header}>
-                    <div>
-                        <div className={cls.author}>
+                <HStack justify="between" align="start" gap="12" className={cls.header}>
+                    <VStack gap="12">
+                        <HStack gap="8">
                             <Skeleton borderRadius="50%" height={50} width={50} />
                             <Skeleton height={21} width={50} />
-                        </div>
-                        <Skeleton className={cls.title} height={30} width={400} />
-                        <div className={cls.tags}>
+                        </HStack>
+                        <Skeleton height={30} width={400} />
+                        <HStack gap="8" wrap>
                             <Skeleton width={25} height={20} />
                             <Skeleton width={60} height={20} />
                             <Skeleton width={70} height={20} />
-                        </div>
-                    </div>
+                        </HStack>
+                    </VStack>
                     <Skeleton height={21} width={80} />
-                </div>
+                </HStack>
                 <Skeleton height={240} width="100%" className={cls.image} />
-                <div className={cls.text}>
-                    <Skeleton height={235} width="100%" />
-                </div>
-                <div className={cls.footer}>
+                <HStack justify="between" gap="8" className={cls.footer}>
                     <Skeleton height={45} width={125} />
                     <Skeleton className={cls.views} height={21} width={60} />
-                </div>
+                </HStack>
             </div>
         );
     }

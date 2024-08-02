@@ -6,6 +6,7 @@ import { DynamicModuleLoader, ReducerList } from 'shared/lib/components/DynamicM
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
+import { VStack } from 'shared/ui/Stack';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
@@ -50,29 +51,31 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     return (
         <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
             <form className={classNames(cls.LoginForm, {}, [className])}>
-                <Text title={t('Authorization form')} />
-                {error && <Text text={error} theme={TextTheme.ERROR} />}
-                <Input
-                    autoFocus
-                    label={t('Login')}
-                    value={username}
-                    onChange={onChangeUsername}
-                />
-                <Input
-                    type="password"
-                    label={t('Password')}
-                    value={password}
-                    onChange={onChangePassword}
-                />
-                <Button
-                    type="submit"
-                    isLoading={isLoading}
-                    onClick={onLoginClick}
-                    theme={ButtonTheme.FILLED}
-                    className={cls.loginBtn}
-                >
-                    {t('Login')}
-                </Button>
+                <VStack max gap="12">
+                    <Text title={t('Authorization form')} />
+                    {error && <Text text={error} theme={TextTheme.ERROR} />}
+                    <Input
+                        autoFocus
+                        label={t('Login')}
+                        value={username}
+                        onChange={onChangeUsername}
+                    />
+                    <Input
+                        type="password"
+                        label={t('Password')}
+                        value={password}
+                        onChange={onChangePassword}
+                    />
+                    <Button
+                        type="submit"
+                        isLoading={isLoading}
+                        onClick={onLoginClick}
+                        theme={ButtonTheme.FILLED}
+                        className={cls.loginBtn}
+                    >
+                        {t('Login')}
+                    </Button>
+                </VStack>
             </form>
         </DynamicModuleLoader>
     );
