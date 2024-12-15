@@ -1,8 +1,8 @@
-import { ArticleView } from 'entities/Article';
 import { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
 import { HStack, VStack } from 'shared/ui/Stack';
+import { ArticleView } from '../..';
 import cls from './ArticleListItem.module.scss';
 
 export interface ArticleListItemSkeletonProps {

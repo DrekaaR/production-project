@@ -23,6 +23,7 @@ module.exports = {
         '@typescript-eslint',
         'i18next',
         'react-hooks',
+        'alex-plugin',
     ],
     rules: {
         'react-hooks/rules-of-hooks': 'error',
@@ -56,6 +57,7 @@ module.exports = {
         'no-undef': 'off',
         'lines-between-class-members': 'off',
         'react/no-array-index-key': 'off',
+        'alex-plugin/path-checker': 'error',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
             ignoreAttribute: ['data-testid', 'to', 'target', 'justify', 'align', 'direction', 'gap'],

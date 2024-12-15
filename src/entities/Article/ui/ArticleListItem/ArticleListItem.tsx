@@ -1,4 +1,3 @@
-import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
 import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import ViewIcon from 'shared/assets/icons/eye.svg';
@@ -8,6 +7,7 @@ import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Flex, HStack } from 'shared/ui/Stack';
+import { ArticleListItemSkeleton } from './ArticleListItemSkeleton';
 import {
     Article, ArticleBlockType, ArticleTextBlock, ArticleView, 
 } from '../../model/types/article';

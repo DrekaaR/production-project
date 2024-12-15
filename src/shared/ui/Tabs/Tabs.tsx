@@ -1,6 +1,6 @@
 import { memo, ReactNode, useCallback } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { HStack } from 'shared/ui/Stack';
+import { HStack } from '../Stack';
 import cls from './Tabs.module.scss';
 
 export interface TabItem {
