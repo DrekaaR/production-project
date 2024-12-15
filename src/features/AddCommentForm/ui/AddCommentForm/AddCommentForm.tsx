@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react';
+import { FormEvent, memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -6,9 +6,8 @@ import { DynamicModuleLoader, ReducerList } from 'shared/lib/components/DynamicM
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { Button } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
-import { addCommentFormActions, addCommentFormReducer }
-    from '../../model/slice/addCommentFormSlice';
 import { getAddCommentFormText } from '../../model/selectors/addCommentFormSelectors';
+import { addCommentFormActions, addCommentFormReducer } from '../../model/slice/addCommentFormSlice';
 import cls from './AddCommentForm.module.scss';
 
 export interface AddCommentFormProps {
@@ -30,7 +29,7 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
         dispatch(addCommentFormActions.setText(value));
     }, [dispatch]);
 
-    const onFormSubmit = useCallback((e) => {
+    const onFormSubmit = useCallback((e: FormEvent) => {
         e.preventDefault();
 
         onCommentTextChange('');
