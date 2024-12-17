@@ -60,7 +60,7 @@ module.exports = {
         'alex-plugin/path-checker': 'error',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            ignoreAttribute: ['data-testid', 'to', 'target', 'justify', 'align', 'direction', 'gap'],
+            ignoreAttribute: ['data-testid', 'to', 'target', 'justify', 'align', 'direction', 'gap', 'as', 'anchor'],
         }],
         'max-len': ['error', {
             ignoreComments: true,

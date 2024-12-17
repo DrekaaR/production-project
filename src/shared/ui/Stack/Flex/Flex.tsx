@@ -1,4 +1,4 @@
-import { memo, ReactNode } from 'react';
+import { ElementType, memo, ReactNode } from 'react';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import cls from './Flex.module.scss';
 
@@ -44,6 +44,7 @@ export interface FlexProps {
     max?: boolean;
     center?: boolean;
     wrap?: boolean;
+    as?: ElementType
 }
 
 export const Flex = memo((props: FlexProps) => {
@@ -57,6 +58,7 @@ export const Flex = memo((props: FlexProps) => {
         max,
         center,
         wrap,
+        as: Tag = 'div',
     } = props;
 
     const additional = [
@@ -74,8 +76,8 @@ export const Flex = memo((props: FlexProps) => {
     };
 
     return (
-        <div className={classNames(cls.Flex, mods, additional)}>
+        <Tag className={classNames(cls.Flex, mods, additional)}>
             {children}
-        </div>
+        </Tag>
     );
 });

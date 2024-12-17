@@ -1,6 +1,6 @@
 import { memo, useCallback } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Select } from 'shared/ui/Select/Select';
+import { ListBox } from 'shared/ui/ListBox/ListBox';
 import { Country } from '../../model/types/country';
 
 interface CountrySelectProps {
@@ -28,12 +28,12 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
     }, [onChange]);
 
     return (
-        <Select
+        <ListBox
             value={value}
             onChange={onChangeHandler}
             // label={t('Select country')}
-            options={options}
-            readonly={readonly}
+            items={options}
+            disabled={readonly}
             className={classNames('', {}, [className])}
         />
     );

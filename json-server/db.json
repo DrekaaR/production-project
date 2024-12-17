@@ -82,11 +82,11 @@
       "first": "Александр",
       "lastname": "Трошин",
       "age": 27,
-      "currency": "RUB",
-      "country": "Russia",
+      "currency": "EUR",
+      "country": "France",
       "city": "Казань",
       "username": "Drekar",
-      "avatar": "https://s0.rbk.ru/v6_top_pics/media/img/6/67/756484737186676.jpg"
+      "avatar": "https://kor.ill.in.ua/m/1260x900/2722809.jpg"
     },
     {
       "id": "2",
@@ -108,7 +108,9 @@
       "views": 1022,
       "createdAt": "27.09.2023",
       "userId": "2",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -168,7 +170,9 @@
       "views": 500,
       "createdAt": "01.03.2024",
       "userId": "2",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -193,7 +197,9 @@
       "views": 300,
       "createdAt": "05.03.2024",
       "userId": "2",
-      "type": ["SCIENCE"],
+      "type": [
+        "SCIENCE"
+      ],
       "blocks": [
         {
           "id": "1",
