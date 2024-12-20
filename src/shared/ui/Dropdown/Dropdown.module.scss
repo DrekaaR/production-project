@@ -1,0 +1,36 @@
+@use 'sass:math';
+@use 'app/styles/index' as *;
+
+
+.Dropdown {
+    position: relative;
+    display: inline-flex;
+}
+
+.trigger {
+}
+
+.menu {
+    min-width: var(--button-width);
+    //position: absolute;
+    //z-index: 10;
+    border: 1px solid var(--border-color);
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    line-height: 1.2;
+    background-color: var(--bg-color);
+    &[data-hover] {
+        color: var(--accent-color)
+    }
+    &:not(:last-child) {
+        border-bottom: 1px solid var(--border-color);
+    }
+
+}
+
+

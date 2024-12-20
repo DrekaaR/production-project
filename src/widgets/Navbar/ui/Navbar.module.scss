@@ -12,13 +12,20 @@
     height: var(--navbar-height);
 }
 
-.loginButton,
+.loginButton {
+    padding: 0 20px;
+    border-left: 1px solid var(--border-color);
+}
+
 .createButton {
-    height: 100%;
     padding: 0 20px;
     border-right: 1px solid var(--border-color);
 }
 
 .title:not(:last-child) {
     margin-bottom: 15px;
+}
+
+.userDropdown{
+    padding: 0 10px;
 }
