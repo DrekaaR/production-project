@@ -1,22 +1,22 @@
-import {
-    getProfileData, getProfileReadonly, profileActions, updateProfileData,
-} from 'entities/Profile';
+import clsx from 'clsx';
 import { getUserAuthData } from 'entities/User';
-import { useCallback } from 'react';
+import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
-import { classNames } from 'shared/lib/classNames/classNames';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { HStack } from 'shared/ui/Stack';
 import { Text } from 'shared/ui/Text/Text';
-import cls from './ProfilePageHeader.module.scss';
+import { useSelector } from 'react-redux';
+import { profileActions } from '../../model/slice/profileSlice';
+import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData';
+import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
+import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';
 
-interface ProfilePageHeaderProps {
+interface EditableProfileCardHeaderProps {
     className?: string;
 }
 
-export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
+export const EditableProfileCardHeader = memo((props: EditableProfileCardHeaderProps) => {
     const { t } = useTranslation('profile');
     const { className } = props;
     const readonly = useSelector(getProfileReadonly);
@@ -38,7 +38,7 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
     }, [dispatch]);
 
     return (
-        <HStack justify="between" className={classNames(cls.ProfilePageHeader, {}, [className])}>
+        <HStack justify="between" className={clsx([className])}>
             <Text title={t('Profile')} />
             {canEdit && (
                 <HStack gap="12">
@@ -60,4 +60,4 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
             )}
         </HStack>
     );
-};
+});
