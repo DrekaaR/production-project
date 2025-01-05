@@ -36,6 +36,13 @@ module.exports = {
         '\\.s?css$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     },
+    reporters: [
+        'default',
+        ['./node_modules/jest-html-reporter', {
+            pageTitle: 'Test Report',
+            outputPath: '<rootDir>/reports/unit/report.html',
+        }],
+    ],
 
     // All imported modules in your tests should be mocked automatically
     // automock: false,

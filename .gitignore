@@ -6,3 +6,4 @@ package-lock.json
 .loki/report.html
 .loki/report.json
 .DS_Store
+/reports/
