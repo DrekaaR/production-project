@@ -32,7 +32,10 @@ interface EditableProfileCardProps {
 }
 
 export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
-    const { className, id } = props;
+    const {
+        className,
+        id,
+    } = props;
     const { t } = useTranslation('profile');
     const dispatch = useAppDispatch();
     const formData = useSelector(getProfileForm);
@@ -96,7 +99,12 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
             <VStack gap="12" className={clsx(cls.EditableProfileCard, className, mods)}>
                 <EditableProfileCardHeader />
                 {validateErrors && validateErrors.map((err) => (
-                    <Text key={err} theme={TextTheme.ERROR} text={validateErrorsTranslates[err]} />
+                    <Text
+                        data-testid="EditableProfileCard"
+                        key={err}
+                        theme={TextTheme.ERROR}
+                        text={validateErrorsTranslates[err]}
+                    />
                 ))}
                 <ProfileCard
                     data={formData}

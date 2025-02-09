@@ -25,6 +25,8 @@ interface TextProps {
     theme?: TextTheme;
     align?: TextAlign;
     size?: TextSize;
+
+    'data-testid'?: string;
 }
 
 export const Text = memo((props: TextProps) => {
@@ -35,14 +37,15 @@ export const Text = memo((props: TextProps) => {
         theme = TextTheme.PRIMARY,
         align = TextAlign.LEFT,
         size = TextSize.M,
+        'data-testid': dataTestId = 'Text',
     } = props;
 
     const additional = [className, cls[theme], cls[align], cls[size]];
 
     return (
         <div className={classNames(cls.Text, {}, additional)}>
-            {title && <p className={cls.title}>{title}</p>}
-            {text && <p className={cls.text}>{text}</p>}
+            {title && <p data-testid={`${dataTestId}.Header`} className={cls.title}>{title}</p>}
+            {text && <p data-testid={`${dataTestId}.Text`} className={cls.text}>{text}</p>}
         </div>
     );
 });

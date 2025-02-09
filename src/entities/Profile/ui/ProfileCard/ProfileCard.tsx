@@ -1,7 +1,5 @@
-import { CountrySelect } from 'entities/Country';
-import { Country } from 'entities/Country/model/types/country';
-import { CurrencySelect } from 'entities/Currency';
-import { Currency } from 'entities/Currency/model/types/currency';
+import { Country, CountrySelect } from 'entities/Country';
+import { Currency, CurrencySelect } from 'entities/Currency';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
@@ -80,6 +78,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
                             className={cls.input}
                             onChange={onChangeFirstname}
                             readonly={readonly}
+                            data-testid="ProfileCard.firstname"
                         />
                     </div>
 
@@ -91,6 +90,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
                             className={cls.input}
                             onChange={onChangeLastname}
                             readonly={readonly}
+                            data-testid="ProfileCard.lastname"
                         />
                     </div>
 
