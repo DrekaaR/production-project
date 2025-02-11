@@ -65,14 +65,18 @@
       "id": "1",
       "username": "Drekar",
       "password": "123",
-      "role": "admin",
+      "roles": [
+        "ADMIN", "MANAGER"
+      ],
       "avatar": "https://img.gazeta.ru/files3/61/14637061/275873457_474636097561657_5667550728784640303_n-pic_32ratio_1200x800-1200x800-57018.jpg"
     },
     {
       "id": "2",
       "username": "VerveParisienne",
       "password": "1234",
-      "role": "user",
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://99px.ru/sstorage/56/2015/01/image_562801151304196937981.jpg"
     }
   ],

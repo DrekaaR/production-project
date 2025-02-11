@@ -6,6 +6,12 @@ export {
     userActions,
 } from './model/slice/userSlice';
 
+export {
+    isUserAdmin,
+    isUserManager,
+    getUserRole,
+} from './model/selectors/roleSelector';
+
 export type {
     User,
     UserSchema,

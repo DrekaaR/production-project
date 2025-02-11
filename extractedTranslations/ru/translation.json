@@ -1,6 +1,7 @@
 {
   " Create article": " Create article",
   "About Page": "About Page",
+  "Admin panel": "Admin panel",
   "Age": "Age",
   "All": "All",
   "All articles": "All articles",
@@ -60,6 +61,7 @@
   "Throw error": "Throw error",
   "Username": "Username",
   "Write your comment": "Write your comment",
+  "You dont have permission for this page": "You dont have permission for this page",
   "ascending": "ascending",
   "by title": "by title",
   "by views": "by views",
