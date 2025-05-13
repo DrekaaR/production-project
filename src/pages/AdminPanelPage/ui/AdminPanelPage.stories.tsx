@@ -1,5 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { AdminPanelPage } from './AdminPanelPage';
+import { StoreDecorator } from 'shared/config/storybook/Decorators/StoreDecorator';
+import AdminPanelPage from './AdminPanelPage';
 
 export default {
     title: 'shared/AdminPanelPage',
@@ -13,3 +14,4 @@ const Template: ComponentStory<typeof AdminPanelPage> = (args) => <AdminPanelPag
 
 export const Default = Template.bind({});
 Default.args = {};
+Default.decorators = [StoreDecorator({})];

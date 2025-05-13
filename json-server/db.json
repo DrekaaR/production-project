@@ -58,6 +58,12 @@
       "userId": "1",
       "text": "ASdasd",
       "id": "k5xnl0N"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "text": "Hi there!",
+      "id": "RsahX1j"
     }
   ],
   "users": [
@@ -66,7 +72,8 @@
       "username": "Drekar",
       "password": "123",
       "roles": [
-        "ADMIN", "MANAGER"
+        "ADMIN",
+        "MANAGER"
       ],
       "avatar": "https://img.gazeta.ru/files3/61/14637061/275873457_474636097561657_5667550728784640303_n-pic_32ratio_1200x800-1200x800-57018.jpg"
     },

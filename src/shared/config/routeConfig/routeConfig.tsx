@@ -86,7 +86,6 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     [AppRoutes.FORBIDDEN]: {
         path: RoutePath.forbidden,
         element: <ForbiddenPage />,
-        authOnly: true,
     },
     // Last
     [AppRoutes.NOT_FOUND]: {

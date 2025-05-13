@@ -10,7 +10,7 @@ interface CountrySelectProps {
     readonly?: boolean;
 }
 
-const options = [
+export const options = [
     { value: Country.France, content: Country.France },
     { value: Country.Germany, content: Country.Germany },
     { value: Country.Japan, content: Country.Japan },
