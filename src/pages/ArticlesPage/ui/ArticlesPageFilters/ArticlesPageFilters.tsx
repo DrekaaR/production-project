@@ -1,7 +1,6 @@
 import {
-    ArticleSortField, ArticleSortSelect, ArticleView, ArticleViewSelector,
+    ArticleSortField, ArticleSortSelect, ArticleType, ArticleView, ArticleViewSelector,
 } from 'entities/Article';
-import { ArticleType } from 'entities/Article/model/types/article';
 import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo, useCallback, useMemo } from 'react';

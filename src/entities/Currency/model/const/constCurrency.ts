@@ -1,4 +1,4 @@
-export enum Currency {
+export enum ConstCurrency {
     RUB = 'RUB',
     USD = 'USD',
     EUR = 'EUR'

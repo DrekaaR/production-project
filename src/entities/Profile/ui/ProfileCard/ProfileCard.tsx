@@ -1,5 +1,5 @@
 import { Country, CountrySelect } from 'entities/Country';
-import { Currency, CurrencySelect } from 'entities/Currency';
+import { ConstCurrency, CurrencySelect } from 'entities/Currency';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
@@ -22,7 +22,7 @@ interface ProfileCardProps {
     onChangeCity?: (value?: string) => void;
     onChangeUsername?: (value?: string) => void;
     onChangeAvatar?: (value?: string) => void;
-    onChangeCurrency?: (value?: Currency) => void;
+    onChangeCurrency?: (value?: ConstCurrency) => void;
     onChangeCountry?: (value?: Country) => void;
 }
 

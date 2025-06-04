@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
+import { ConstCurrency } from 'entities/Currency';
 import { ProfileCard } from 'entities/Profile';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -11,6 +11,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
 import { VStack } from 'shared/ui/Stack';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { ValidateProfileError } from '../../model/const/const';
 import { getProfileError } from '../../model/selectors/getProfileError/getProfileError';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
 import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/getProfileIsLoading';
@@ -18,7 +19,6 @@ import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/get
 import { getProfileValidateErrors } from '../../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
 import { fetchProfileData } from '../../model/services/fetchProfileData/fetchProfileData';
 import { profileActions, profileReducer } from '../../model/slice/profileSlice';
-import { ValidateProfileError } from '../../model/types/editableProfileCardSchema';
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
 import cls from './EditableProfileCard.module.scss';
 
@@ -77,7 +77,7 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
         dispatch(profileActions.updateProfile({ avatar: value }));
     }, [dispatch]);
 
-    const onChangeCurrency = useCallback((currency?: Currency) => {
+    const onChangeCurrency = useCallback((currency?: ConstCurrency) => {
         dispatch(profileActions.updateProfile({ currency }));
     }, [dispatch]);
 

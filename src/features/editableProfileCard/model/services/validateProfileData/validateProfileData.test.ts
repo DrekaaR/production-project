@@ -1,13 +1,13 @@
 import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
-import { ValidateProfileError } from '../../..';
+import { ConstCurrency } from 'entities/Currency';
+import { ValidateProfileError } from '../../const/const';
 import { validateProfileData } from './validateProfileData';
 
 const data = {
     first: 'Alex',
     lastname: 'Troshin',
     country: Country.Russia,
-    currency: Currency.RUB,
+    currency: ConstCurrency.RUB,
     username: 'Alex2t',
     age: 27,
     city: 'Ufa',

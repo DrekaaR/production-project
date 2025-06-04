@@ -1,3 +1,5 @@
+export { UserRole } from './model/const/constUser';
+
 export { getUserAuthData } from './model/selectors/getUserAuthData/getUserAuthData';
 export { getUserInited } from './model/selectors/getUserInited/getUserInited';
 

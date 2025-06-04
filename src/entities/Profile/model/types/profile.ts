@@ -1,12 +1,12 @@
-import { Country } from 'entities/Country/model/types/country';
-import { Currency } from 'entities/Currency/model/types/currency';
+import { Country } from 'entities/Country';
+import { ConstCurrency } from 'entities/Currency';
 
 export interface Profile {
     id?: string;
     first?: string;
     lastname?: string;
     age?: number | '';
-    currency?: Currency;
+    currency?: ConstCurrency;
     country?: Country;
     city?: string;
     username?: string;

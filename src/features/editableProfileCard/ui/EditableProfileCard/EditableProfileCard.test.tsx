@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
+import { ConstCurrency } from 'entities/Currency';
 import { Profile } from 'entities/Profile';
 import { componentRender } from 'shared/lib/test/componentRender/componentRender';
 import ResizeObserver from 'resize-observer-polyfill';
@@ -13,7 +13,7 @@ const profile: Profile = {
     first: 'admin',
     lastname: 'admin',
     age: 43,
-    currency: Currency.EUR,
+    currency: ConstCurrency.EUR,
     city: 'Minsk',
     country: Country.Russia,
     username: 'admin123',

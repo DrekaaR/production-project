@@ -1,7 +1,7 @@
 import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
+import { ConstCurrency } from 'entities/Currency';
 import { TestAsyncThunk } from 'shared/lib/test/TestAsyncThunk/TestAsyncThunk';
-import { ValidateProfileError } from '../../..';
+import { ValidateProfileError } from '../../const/const';
 import { updateProfileData } from './updateProfileData';
 
 const data = {
@@ -9,7 +9,7 @@ const data = {
     first: 'Alex',
     lastname: 'Troshin',
     country: Country.Russia,
-    currency: Currency.RUB,
+    currency: ConstCurrency.RUB,
     username: 'Alex2t',
     age: 27,
     city: 'Ufa',

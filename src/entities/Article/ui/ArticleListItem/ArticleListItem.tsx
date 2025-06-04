@@ -7,12 +7,11 @@ import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Flex, HStack } from 'shared/ui/Stack';
-import { ArticleListItemSkeleton } from './ArticleListItemSkeleton';
-import {
-    Article, ArticleBlockType, ArticleTextBlock, ArticleView, 
-} from '../../model/types/article';
+import { ArticleBlockType, ArticleView } from '../../model/const/articleConst';
+import { Article, ArticleTextBlock } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../../ui/ArticleTextBlockComponent/ArticleTextBlockComponent';
 import cls from './ArticleListItem.module.scss';
+import { ArticleListItemSkeleton } from './ArticleListItemSkeleton';
 
 export interface ArticleListItemProps {
     className?: string;

@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
 import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
+import { ConstCurrency } from 'entities/Currency';
 import stepan from 'shared/assets/tests/stepan.jpg';
 import { StoreDecorator } from 'shared/config/storybook/Decorators/StoreDecorator';
 import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
@@ -21,7 +21,7 @@ const formData = {
     first: 'Alex',
     lastname: 'Troshin',
     country: Country.Russia,
-    currency: Currency.RUB,
+    currency: ConstCurrency.RUB,
     username: 'Alex2t',
     avatar: stepan,
     age: 27,

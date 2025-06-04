@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Theme } from 'app/providers/ThemeProvider';
 import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
+import { ConstCurrency } from 'entities/Currency';
 import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
 import stepan from 'shared/assets/tests/stepan.jpg';
 import { ProfileCard } from './ProfileCard';
@@ -22,7 +22,7 @@ Light.args = {
         first: 'Alex',
         lastname: 'Troshin',
         country: Country.Russia,
-        currency: Currency.RUB,
+        currency: ConstCurrency.RUB,
         avatar: stepan,
         username: 'Alex2t',
         age: 27,
@@ -44,7 +44,7 @@ Dark.args = {
         first: 'Alex',
         lastname: 'Troshin',
         country: Country.Russia,
-        currency: Currency.RUB,
+        currency: ConstCurrency.RUB,
         avatar: stepan,
         username: 'Alex2t',
         age: 27,

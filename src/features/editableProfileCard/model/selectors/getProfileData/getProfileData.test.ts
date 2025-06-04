@@ -1,6 +1,6 @@
 import { StateSchema } from 'app/providers/StoreProvider';
 import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
+import { ConstCurrency } from 'entities/Currency';
 import { getProfileData } from './getProfileData';
 
 describe('getProfileData.test', () => {
@@ -9,7 +9,7 @@ describe('getProfileData.test', () => {
             first: 'Alex',
             lastname: 'Troshin',
             country: Country.Russia,
-            currency: Currency.RUB,
+            currency: ConstCurrency.RUB,
             username: 'Alex2t',
             age: 27,
             city: 'Ufa',

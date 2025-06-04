@@ -1,7 +1,7 @@
-export {
+export type {
     ArticleDetailsCommentsSchema,
 } from './model/types/ArticleDetailsCommentsSchema';
-export {
+export type {
     ArticleDetailsPageRecommendationsSchema,
 } from './model/types/ArticleDetailsPageRecommendationsSchema';
 export {
