@@ -11,19 +11,17 @@ import { ArticleBlockType, ArticleView } from '../../model/const/articleConst';
 import { Article, ArticleTextBlock } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../../ui/ArticleTextBlockComponent/ArticleTextBlockComponent';
 import cls from './ArticleListItem.module.scss';
-import { ArticleListItemSkeleton } from './ArticleListItemSkeleton';
 
 export interface ArticleListItemProps {
     className?: string;
     article: Article;
     view: ArticleView;
-    isLoading?: boolean;
     target?: HTMLAttributeAnchorTarget;
 }
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
     const {
-        className, article, view, isLoading, target,
+        className, article, view, target,
     } = props;
     const { t } = useTranslation('article');
 
@@ -40,10 +38,6 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             <ViewIcon />
         </HStack>
     );
-
-    if (isLoading) {
-        return <ArticleListItemSkeleton view={view} />;
-    }
 
     if (view === ArticleView.BIG) {
         const textBlock = article.blocks.find(

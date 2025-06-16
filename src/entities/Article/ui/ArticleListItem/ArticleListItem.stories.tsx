@@ -85,13 +85,6 @@ Big.args = {
     view: ArticleView.BIG,
 };
 
-export const BigLoading = Template.bind({});
-BigLoading.args = {
-    article,
-    isLoading: true,
-    view: ArticleView.BIG,
-};
-
 export const DarkBig = Template.bind({});
 DarkBig.args = {
     article,
@@ -99,24 +92,9 @@ DarkBig.args = {
 };
 DarkBig.decorators = [ThemeDecorator(Theme.DARK)];
 
-export const DarkBigLoading = Template.bind({});
-DarkBigLoading.args = {
-    article,
-    isLoading: true,
-    view: ArticleView.BIG,
-};
-DarkBigLoading.decorators = [ThemeDecorator(Theme.DARK)];
-
 export const Small = Template.bind({});
 Small.args = {
     article,
-    view: ArticleView.SMALL,
-};
-
-export const SmallLoading = Template.bind({});
-SmallLoading.args = {
-    article,
-    isLoading: true,
     view: ArticleView.SMALL,
 };
 
@@ -126,11 +104,3 @@ DarkSmall.args = {
     view: ArticleView.SMALL,
 };
 DarkSmall.decorators = [ThemeDecorator(Theme.DARK)];
-
-export const DarkSmallLoading = Template.bind({});
-DarkSmallLoading.args = {
-    article,
-    isLoading: true,
-    view: ArticleView.SMALL,
-};
-DarkSmallLoading.decorators = [ThemeDecorator(Theme.DARK)];
