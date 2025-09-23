@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
 import { componentRender } from 'shared/lib/test/componentRender/componentRender';
-import { Navbar } from '..';
+import { Navbar } from './Navbar';
 
 describe('Navbar', () => {
     test('Test render', () => {

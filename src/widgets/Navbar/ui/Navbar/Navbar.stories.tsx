@@ -1,8 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Theme } from 'app/providers/ThemeProvider';
-import React from 'react';
 import { StoreDecorator } from 'shared/config/storybook/Decorators/StoreDecorator';
 import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
+import { Theme } from 'app/providers/ThemeProvider';
 import { Navbar } from './Navbar';
 
 export default {
@@ -13,7 +12,7 @@ export default {
     },
 } as ComponentMeta<typeof Navbar>;
 
-const Template: ComponentStory<typeof Navbar> = (args) => <Navbar {...args} />;
+const Template: ComponentStory<typeof Navbar> = () => <Navbar />;
 
 export const Default = Template.bind({});
 Default.args = {};

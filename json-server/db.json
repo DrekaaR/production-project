@@ -1,4 +1,36 @@
 {
+  "notifications": [
+    {
+      "id": "1",
+      "title": "New Message Received",
+      "description": "You have received a new message from John Doe.",
+      "userId": "101"
+    },
+    {
+      "id": "2",
+      "title": "Account Updated",
+      "description": "Your account information has been successfully updated.",
+      "userId": "102"
+    },
+    {
+      "id": "3",
+      "title": "Password Changed",
+      "description": "Your password was changed successfully. If this was not you, please contact support.",
+      "userId": "103"
+    },
+    {
+      "id": "4",
+      "title": "Subscription Expiring",
+      "description": "Your subscription will expire in 3 days. Renew now to continue enjoying our services.",
+      "userId": "104"
+    },
+    {
+      "id": "5",
+      "title": "System Maintenance Scheduled",
+      "description": "The system will undergo maintenance on August 15 from 2:00 AM to 4:00 AM UTC.",
+      "userId": "105"
+    }
+  ],
   "posts": [
     {
       "id": "1",

@@ -1,0 +1,10 @@
+@use 'sass:math';
+@use 'app/styles/index' as *;
+
+.NavbarLoginAndUser {
+    padding: 0 10px;
+}
+
+.loginButton {
+    height: 100%;
+}
