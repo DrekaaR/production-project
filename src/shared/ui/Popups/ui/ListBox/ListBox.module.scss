@@ -1,5 +1,5 @@
-@use 'sass:math';
-@use 'app/styles/index' as *;
+@use "sass:math";
+@use "app/styles/index" as *;
 
 .ListBox {
     position: relative;
@@ -12,7 +12,7 @@
 .trigger {
     border: 1px solid var(--border-color);
     height: 40px;
-    padding: 0 10px 0 10px;
+    padding: 0 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -29,7 +29,6 @@
         outline: 2px solid var(--accent-color);
     }
 }
-
 
 .options {
     position: absolute;
@@ -53,19 +52,17 @@
 
     &[data-disabled] {
         opacity: 0.5;
-        //background-color: var(--accent-color);
-        //color: #ffffff;
     }
 
     &[data-focus] {
         background-color: var(--accent-color);
-        color: #ffffff;
+        color: #fff;
     }
 
     @media (any-hover: hover) {
         &:hover {
             background-color: var(--accent-color);
-            color: #ffffff;
+            color: #fff;
         }
     }
 }

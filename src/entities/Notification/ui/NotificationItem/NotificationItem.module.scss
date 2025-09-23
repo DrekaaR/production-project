@@ -1,7 +1,8 @@
-@use 'sass:math';
-@use 'app/styles/index' as *;
+@use "sass:math";
+@use "app/styles/index" as *;
 
-.NotificationItem, .NotificationItemSkeleton {
+.NotificationItem,
+.NotificationItemSkeleton {
     padding: 10px 15px;
     &:not(:last-child) {
         border-bottom: 1px solid var(--border-color);
@@ -14,4 +15,3 @@
 
 .description {
 }
-
