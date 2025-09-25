@@ -1,13 +1,10 @@
-import { NotificationList } from 'entities/Notification';
 import { getUserAuthData } from 'entities/User';
+import { NotificationButton } from 'features/notificationButton';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import BellIcon from 'shared/assets/icons/bell.svg';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { Popover } from 'shared/ui/Popups';
 import { Flex, HStack } from 'shared/ui/Stack';
 import { LangSwitcher } from 'widgets/LangSwitcher';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
@@ -30,16 +27,7 @@ export const Navbar = memo(() => {
                             {t('Create article')}
                         </AppLink>
                     )}
-                    <Popover
-                        anchor="bottom"
-                        trigger={(
-                            <Button theme={ButtonTheme.CLEAR} className={cls.button}>
-                                <BellIcon />
-                            </Button>
-                        )}
-                    >
-                        <NotificationList />
-                    </Popover>
+                    <NotificationButton />
                 </Flex>
                 <Flex>
                     <NavbarLoginAndUser />
