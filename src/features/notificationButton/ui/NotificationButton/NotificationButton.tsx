@@ -1,11 +1,11 @@
 import clsx from 'clsx';
+import { NotificationList } from 'entities/Notification';
 import { getUserAuthData } from 'entities/User';
 import { memo } from 'react';
 import { useSelector } from 'react-redux';
+import BellIcon from 'shared/assets/icons/bell.svg';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Popover } from 'shared/ui/Popups';
-import BellIcon from 'shared/assets/icons/bell.svg';
-import { NotificationList } from 'entities/Notification';
 import cls from './NotificationButton.module.scss';
 
 interface NotificationButtonProps {
@@ -30,7 +30,7 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
                 </Button>
             )}
         >
-            <NotificationList />
+            <NotificationList className={cls.list} />
         </Popover>
     );
 });

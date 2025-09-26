@@ -22,6 +22,10 @@
     border-right: 1px solid var(--border-color);
 }
 
+.notificationButton {
+    padding: 0 15px;
+}
+
 .title:not(:last-child) {
     margin-bottom: 15px;
 }

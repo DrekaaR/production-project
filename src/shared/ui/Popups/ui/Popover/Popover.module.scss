@@ -3,14 +3,11 @@
 
 .Popover {
     position: relative;
+    z-index: 1000;
 }
 
 .body {
     background-color: var(--bg-color);
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-
-.trigger {
-
 }
