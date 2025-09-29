@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Text, TextSize } from 'shared/ui/Text/Text';
+import { Text, TextSize } from '@/shared/ui/Text/Text';
 import { useNotifications } from '../../api/notificationApi';
 import { Notification } from '../../model/types/notification';
 import { NotificationItemSkeleton } from '../../ui/NotificationItem/NotificationItemSkeleton';

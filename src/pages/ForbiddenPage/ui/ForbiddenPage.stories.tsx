@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { StoreDecorator } from 'shared/config/storybook/Decorators/StoreDecorator';
+import { StoreDecorator } from '@/shared/config/storybook/Decorators/StoreDecorator';
 import ForbiddenPage from './ForbiddenPage';
 
 export default {

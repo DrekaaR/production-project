@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { memo } from 'react';
-import { VStack } from 'shared/ui/Stack';
+import { VStack } from '@/shared/ui/Stack';
 import { Notification } from '../../model/types/notification';
 import cls from './NotificationItem.module.scss';
 

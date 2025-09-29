@@ -1,8 +1,8 @@
 import { memo } from 'react';
-import ListIcon from 'shared/assets/icons/list.svg';
-import TilesIcon from 'shared/assets/icons/tiles.svg';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import ListIcon from '@/shared/assets/icons/list.svg';
+import TilesIcon from '@/shared/assets/icons/tiles.svg';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
 import { ArticleView } from '../../model/const/articleConst';
 import cls from './ArticleViewSelector.module.scss';
 

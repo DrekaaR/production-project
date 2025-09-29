@@ -1,13 +1,13 @@
-import { getUserAuthData } from 'entities/User';
-import { NotificationButton } from 'features/notificationButton';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { AppLink } from 'shared/ui/AppLink/AppLink';
-import { Flex, HStack } from 'shared/ui/Stack';
-import { LangSwitcher } from 'widgets/LangSwitcher';
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
+import { NotificationButton } from '@/features/notificationButton';
+import { getUserAuthData } from '@/entities/User';
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
+import { AppLink } from '@/shared/ui/AppLink/AppLink';
+import { Flex, HStack } from '@/shared/ui/Stack';
+import { LangSwitcher } from '@/widgets/LangSwitcher';
+import { ThemeSwitcher } from '@/widgets/ThemeSwitcher';
 import { NavbarLoginAndUser } from '../NavbarLoginAndUser/NavbarLoginAndUser';
 import cls from './Navbar.module.scss';
 

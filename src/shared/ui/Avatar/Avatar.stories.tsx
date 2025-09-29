@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import stepan from 'shared/assets/tests/stepan.jpg';
+import stepan from '@/shared/assets/tests/stepan.jpg';
 import { Avatar } from './Avatar';
 
 export default {

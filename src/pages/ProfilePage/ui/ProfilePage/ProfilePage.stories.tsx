@@ -1,10 +1,10 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Theme } from 'app/providers/ThemeProvider';
-import { Country } from 'entities/Country';
-import { ConstCurrency } from 'entities/Currency';
-import stepan from 'shared/assets/tests/stepan.jpg';
-import { StoreDecorator } from 'shared/config/storybook/Decorators/StoreDecorator';
-import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
+import { Theme } from '@/app/providers/ThemeProvider';
+import { Country } from '@/entities/Country';
+import { ConstCurrency } from '@/entities/Currency';
+import stepan from '@/shared/assets/tests/stepan.jpg';
+import { StoreDecorator } from '@/shared/config/storybook/Decorators/StoreDecorator';
+import { ThemeDecorator } from '@/shared/config/storybook/Decorators/ThemeDecorator';
 import ProfilePage from './ProfilePage';
 
 export default {

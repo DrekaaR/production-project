@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { memo } from 'react';
-import { Page } from 'widgets/Page/Page';
+import { Page } from '@/widgets/Page/Page';
 import cls from './AdminPanelPage.module.scss';
 
 interface AdminPanelPageProps {

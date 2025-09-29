@@ -1,10 +1,10 @@
 import {
-    Listbox as HListBox, ListboxButton, ListboxOption, ListboxOptions, 
+    Listbox as HListBox, ListboxButton, ListboxOption, ListboxOptions,
 } from '@headlessui/react';
 import clsx from 'clsx';
 import { memo, ReactNode } from 'react';
-import CheckIcon from 'shared/assets/icons/check.svg';
-import ArrowIcon from 'shared/assets/icons/chevron.svg';
+import CheckIcon from '@/shared/assets/icons/check.svg';
+import ArrowIcon from '@/shared/assets/icons/chevron.svg';
 import cls from './ListBox.module.scss';
 
 export interface ListBoxItem {

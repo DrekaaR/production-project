@@ -1,8 +1,8 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Theme } from 'app/providers/ThemeProvider';
 import React from 'react';
-import { StoreDecorator } from 'shared/config/storybook/Decorators/StoreDecorator';
-import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
+import { Theme } from '@/app/providers/ThemeProvider';
+import { StoreDecorator } from '@/shared/config/storybook/Decorators/StoreDecorator';
+import { ThemeDecorator } from '@/shared/config/storybook/Decorators/ThemeDecorator';
 import { Sidebar } from './Sidebar';
 
 export default {

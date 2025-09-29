@@ -1,16 +1,16 @@
-import {
-    ArticleSortField, ArticleSortSelect, ArticleType, ArticleView, ArticleViewSelector,
-} from 'entities/Article';
 import { useSelector } from 'react-redux';
-import { classNames } from 'shared/lib/classNames/classNames';
 import { memo, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
-import { useDebounce } from 'shared/lib/hooks/useDebounce';
-import { SortOrder } from 'shared/types';
-import { Input } from 'shared/ui/Input/Input';
-import { HStack } from 'shared/ui/Stack';
-import { TabItem, Tabs } from 'shared/ui/Tabs/Tabs';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import {
+    ArticleSortField, ArticleSortSelect, ArticleType, ArticleView, ArticleViewSelector,
+} from '@/entities/Article';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
+import { useDebounce } from '@/shared/lib/hooks/useDebounce';
+import { SortOrder } from '@/shared/types';
+import { Input } from '@/shared/ui/Input/Input';
+import { HStack } from '@/shared/ui/Stack';
+import { TabItem, Tabs } from '@/shared/ui/Tabs/Tabs';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { articlesPageActions } from '../../model/slices/articlesPageSlice';
 import {

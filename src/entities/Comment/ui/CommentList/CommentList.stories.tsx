@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import testImage from 'shared/assets/tests/stepan.jpg';
+import testImage from '@/shared/assets/tests/stepan.jpg';
 import { CommentList } from './CommentList';
 
 export default {

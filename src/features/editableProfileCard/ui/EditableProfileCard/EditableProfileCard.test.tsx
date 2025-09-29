@@ -1,10 +1,10 @@
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { Country } from 'entities/Country';
-import { ConstCurrency } from 'entities/Currency';
-import { Profile } from 'entities/Profile';
-import { componentRender } from 'shared/lib/test/componentRender/componentRender';
 import ResizeObserver from 'resize-observer-polyfill';
+import { Country } from '@/entities/Country';
+import { ConstCurrency } from '@/entities/Currency';
+import { Profile } from '@/entities/Profile';
+import { componentRender } from '@/shared/lib/test/componentRender/componentRender';
 import { profileReducer } from '../../model/slice/profileSlice';
 import { EditableProfileCard } from './EditableProfileCard';
 

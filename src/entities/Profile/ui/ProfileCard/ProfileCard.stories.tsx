@@ -1,9 +1,9 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Theme } from 'app/providers/ThemeProvider';
-import { Country } from 'entities/Country';
-import { ConstCurrency } from 'entities/Currency';
-import { ThemeDecorator } from 'shared/config/storybook/Decorators/ThemeDecorator';
-import stepan from 'shared/assets/tests/stepan.jpg';
+import { Theme } from '@/app/providers/ThemeProvider';
+import { Country } from '@/entities/Country';
+import { ConstCurrency } from '@/entities/Currency';
+import { ThemeDecorator } from '@/shared/config/storybook/Decorators/ThemeDecorator';
+import stepan from '@/shared/assets/tests/stepan.jpg';
 import { ProfileCard } from './ProfileCard';
 
 export default {

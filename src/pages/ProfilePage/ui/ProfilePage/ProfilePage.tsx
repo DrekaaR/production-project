@@ -1,7 +1,7 @@
 import clsx from 'clsx';
-import { EditableProfileCard } from 'features/editableProfileCard';
 import { useParams } from 'react-router-dom';
-import { Page } from 'widgets/Page/Page';
+import { EditableProfileCard } from '@/features/editableProfileCard';
+import { Page } from '@/widgets/Page/Page';
 import cls from './ProfilePage.module.scss';
 
 interface ProfilePageProps {

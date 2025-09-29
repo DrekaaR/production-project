@@ -1,7 +1,7 @@
 import { memo, useCallback, useState } from 'react';
-import CheckIcon from 'shared/assets/icons/check.svg';
-import CopyIcon from 'shared/assets/icons/copy.svg';
-import { classNames } from 'shared/lib/classNames/classNames';
+import CheckIcon from '@/shared/assets/icons/check.svg';
+import CopyIcon from '@/shared/assets/icons/copy.svg';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from '../Button/Button';
 import cls from './Code.module.scss';
 

@@ -1,15 +1,15 @@
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import CalendarIcon from 'shared/assets/icons/calendar.svg';
-import EyeIcon from 'shared/assets/icons/eye.svg';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { DynamicModuleLoader, ReducerList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
-import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
-import { HStack, VStack } from 'shared/ui/Stack';
-import { Text, TextSize } from 'shared/ui/Text/Text';
+import CalendarIcon from '@/shared/assets/icons/calendar.svg';
+import EyeIcon from '@/shared/assets/icons/eye.svg';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { DynamicModuleLoader, ReducerList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect';
+import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
+import { HStack, VStack } from '@/shared/ui/Stack';
+import { Text, TextSize } from '@/shared/ui/Text/Text';
 import { ArticleBlockType } from '../../model/const/articleConst';
 import {
     getArticleDetailsData,
