@@ -31,13 +31,15 @@ export const NotificationList = memo((props: NotificationListProps) => {
 
     if (error) {
         return (
-            <Text text={t('Error while loading notifications list')} />
+            <div className={cls.body}>
+                <Text text={t('Error while loading notifications list')} />
+            </div>
         );
     }
 
     if (!isLoading && !notifications?.length) {
         return (
-            <div className={clsx(cls.NotificationList, className)}>
+            <div className={cls.body}>
                 <Text title={t('No notifications were found')} size={TextSize.M} />
             </div>
         );

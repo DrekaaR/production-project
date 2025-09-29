@@ -1,10 +1,11 @@
 import clsx from 'clsx';
 import { NotificationList } from 'entities/Notification';
-import { getUserAuthData } from 'entities/User';
-import { memo } from 'react';
-import { useSelector } from 'react-redux';
+import { memo, useCallback, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import BellIcon from 'shared/assets/icons/bell.svg';
+import { AnimationProvider } from 'shared/lib/components/AnimationProvider';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { Drawer } from 'shared/ui/Drawer/Drawer';
 import { Popover } from 'shared/ui/Popups';
 import cls from './NotificationButton.module.scss';
 
@@ -14,23 +15,39 @@ interface NotificationButtonProps {
 
 export const NotificationButton = memo((props: NotificationButtonProps) => {
     const { className } = props;
-    const authData = useSelector(getUserAuthData);
+    const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-    if (!authData) {
-        return null;
-    }
+    const onDrawerOpen = useCallback(() => {
+        setIsDrawerOpen(true);
+    }, []);
+
+    const onDrawerClose = useCallback(() => {
+        setIsDrawerOpen(false);
+    }, []);
+
+    const trigger = (
+        <Button onClick={onDrawerOpen} theme={ButtonTheme.CLEAR} className={cls.trigger}>
+            <BellIcon />
+        </Button>
+    );
 
     return (
-        <Popover
-            anchor="bottom"
-            className={clsx(cls.NotificationButton, className)}
-            trigger={(
-                <Button theme={ButtonTheme.CLEAR} className={cls.button}>
-                    <BellIcon />
-                </Button>
-            )}
-        >
-            <NotificationList className={cls.list} />
-        </Popover>
+        isMobile ? (
+            <AnimationProvider>
+                {trigger}
+                <Drawer isOpen={isDrawerOpen} onClose={onDrawerClose}>
+                    <NotificationList />
+                </Drawer>
+            </AnimationProvider>
+        ) : (
+            <Popover
+                anchor="bottom"
+                className={clsx(cls.NotificationButton, className)}
+                trigger={trigger}
+            >
+                <NotificationList className={cls.list} />
+            </Popover>
+        )
     );
 });
