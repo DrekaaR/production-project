@@ -3,7 +3,6 @@ import { memo, useCallback, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { NotificationList } from '@/entities/Notification';
 import BellIcon from '@/shared/assets/icons/bell.svg';
-import { AnimationProvider } from '@/shared/lib/components/AnimationProvider';
 import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
 import { Drawer } from '@/shared/ui/Drawer/Drawer';
 import { Popover } from '@/shared/ui/Popups';
@@ -34,12 +33,12 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
 
     return (
         isMobile ? (
-            <AnimationProvider>
+            <>
                 {trigger}
                 <Drawer isOpen={isDrawerOpen} onClose={onDrawerClose}>
                     <NotificationList />
                 </Drawer>
-            </AnimationProvider>
+            </>
         ) : (
             <Popover
                 anchor="bottom"
